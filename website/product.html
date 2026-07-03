@@ -58,6 +58,7 @@
       overflow: hidden;
       padding: 60px 0 40px;
       position: relative;
+      touch-action: pan-y;
     }
 
     /* Aurora glow blob behind center phone */
@@ -790,28 +791,31 @@
 
   /* ── Touch / pointer drag ────────────────────────────────────────── */
   let dragStartX = null;
+  let dragStartY = null;
   let isDragging = false;
 
-  function onDragStart(x) { dragStartX = x; isDragging = true; stopTimer(); }
-  function onDragEnd(x) {
+  function onDragStart(x, y) { dragStartX = x; dragStartY = y; isDragging = true; stopTimer(); }
+  function onDragEnd(x, y) {
     if (!isDragging) return;
     isDragging = false;
-    const diff = dragStartX - x;
-    if (Math.abs(diff) > 48) {
-      goTo(diff > 0 ? current + 1 : current - 1, false);
+    const dx = dragStartX - x;
+    const dy = dragStartY - y;
+    if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy)) {
+      goTo(dx > 0 ? current + 1 : current - 1, false);
     }
     startTimer();
     dragStartX = null;
+    dragStartY = null;
   }
 
   // Touch
-  stage.addEventListener('touchstart', (e) => onDragStart(e.touches[0].clientX), { passive: true });
-  stage.addEventListener('touchend',   (e) => onDragEnd(e.changedTouches[0].clientX), { passive: true });
+  stage.addEventListener('touchstart', (e) => onDragStart(e.touches[0].clientX, e.touches[0].clientY), { passive: true });
+  stage.addEventListener('touchend',   (e) => onDragEnd(e.changedTouches[0].clientX, e.changedTouches[0].clientY), { passive: true });
 
   // Pointer (mouse drag)
-  stage.addEventListener('pointerdown', (e) => { if (e.button === 0) onDragStart(e.clientX); });
-  stage.addEventListener('pointerup',   (e) => { if (isDragging)     onDragEnd(e.clientX); });
-  stage.addEventListener('pointerleave',(e) => { if (isDragging)     onDragEnd(e.clientX); });
+  stage.addEventListener('pointerdown', (e) => { if (e.button === 0) onDragStart(e.clientX, e.clientY); });
+  stage.addEventListener('pointerup',   (e) => { if (isDragging)     onDragEnd(e.clientX, e.clientY); });
+  stage.addEventListener('pointerleave',(e) => { if (isDragging)     onDragEnd(e.clientX, e.clientY); });
 
   // Neighbor slide click: jump to that slide
   slideEls.forEach((el, i) => {
