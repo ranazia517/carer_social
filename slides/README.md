@@ -1,15 +1,16 @@
 # CARER Pitch Deck
 
-20-slide investor / academic / public deck. Aurora brand, built in claude.ai/design ("CARER Pitch Deck" project file).
+21-slide investor / academic / public deck. Aurora brand, built in claude.ai/design ("CARER Pitch Deck" project file).
+Last updated Jul 2026: added References slide (slide 21) + tightened per-slide source lines throughout.
 
 ## Files
 
 | File | Format | Size | Notes |
 |---|---|---|---|
-| `carer-pitch-deck.html` | Standalone HTML | ~862KB | Self-contained; opens in any browser. Navigate with ← → arrow keys. |
-| `carer-pitch-deck.pptx` | PowerPoint | ~541KB | Exported from claude.ai/design as `CARER_Mobile_Wellbeing_App.pptx`; rename as needed. |
-| `carer-pitch-deck.pdf` | PDF | ~1.2MB | Generated from the HTML via headless Chromium (print-to-PDF, landscape A4, `printBackground:true`). |
-| `preview/deck-01.png` … `deck-20.png` | PNG previews | 1920×1080 | Playwright screenshots, one per slide. |
+| `carer-pitch-deck.html` | Standalone HTML | ~867KB | Self-contained; opens in any browser. Navigate with ← → arrow keys. |
+| `carer-pitch-deck.pptx` | PowerPoint | ~571KB | Exported from claude.ai/design as `CARER_Mobile_Wellbeing_App (1).pptx`; rename as needed. |
+| `carer-pitch-deck.pdf` | PDF | ~1.4MB | Generated from the HTML via headless Chromium (print-to-PDF, landscape A4, `printBackground:true`). |
+| `preview/deck-01.png` … `deck-21.png` | PNG previews | 1920×1080 | Playwright screenshots, one per slide. |
 
 ## Slide Map
 
@@ -35,6 +36,21 @@
 | 18 | Roadmap | Now / 6mo / 12mo |
 | 19 | Team & Governance | Wellnetix Ltd |
 | 20 | Ask | CTA / funding ask |
+| 21 | References | Full citations + methodology note for all statistics in the deck |
+
+## Sources (slide 21)
+
+All statistics are cited on slide 21 with source lines per-slide throughout. Key sources:
+
+| Source | Used for |
+|---|---|
+| **Carers UK — Key Facts & Figures 2025** | UK carer count (5.8M), economic value (£184bn/yr), health impact stats |
+| **Carers UK — State of Caring 2024** | Burnout rates, mental health impact, support gaps |
+| **AARP — Caregiving in the US 2025** | US carer count (53M), demographics, hours of care |
+| **AARP — Valuing the Invaluable 2026** | US economic value of unpaid care |
+| **ScienceDirect — Caregiver Burnout Meta-analysis 2025** | Clinical evidence base for burnout prevalence |
+| **Market Research Future — Digital Mental Health Market 2025** | TAM figure for digital mental health market |
+| **MarketsandMarkets — Mental Health Apps Market 2025** | SAM/SOM for mental health apps specifically |
 
 ## Open Items
 
@@ -73,7 +89,7 @@ with sync_playwright() as pw:
     br.close()
 ```
 
-**Re-generate slide previews (all 20):**
+**Re-generate slide previews (all 21):**
 ```bash
 python3 - << 'EOF'
 import asyncio, io
@@ -93,10 +109,11 @@ async def main():
         await pg.goto(f"file://{HTML}#1", wait_until='networkidle')
         await pg.wait_for_timeout(3000)
         await pg.click('body')
-        for i in range(1, 21):
+        n = await pg.evaluate("document.querySelectorAll('section').length")
+        for i in range(1, n + 1):
             buf = await pg.screenshot(type='png', clip={'x':0,'y':0,'width':1920,'height':1080})
             Image.open(io.BytesIO(buf)).convert('RGB').save(PREV / f"deck-{i:02d}.png", 'PNG')
-            if i < 20:
+            if i < n:
                 await pg.keyboard.press('ArrowRight')
                 await pg.wait_for_timeout(800)
         await br.close()
@@ -104,4 +121,4 @@ asyncio.run(main())
 EOF
 ```
 
-Note: The HTML deck navigates with ← → arrow keys (single-page React app, 20 `<section>` elements; hash updates as `#1`–`#20` but the app must already be loaded — `goto(url#N)` resets to slide 1, so always use keyboard navigation for sequential capture).
+Note: The HTML deck navigates with ← → arrow keys (single-page React app, 21 `<section>` elements; hash updates as `#1`–`#21` but the app must already be loaded — `goto(url#N)` resets to slide 1, so always use keyboard navigation for sequential capture).
