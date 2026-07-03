@@ -6,7 +6,10 @@ Strategic planning pack for **CARER** (Wellnetix Ltd) — the private, always-fr
 - **`BUSINESS_PLAN.md`** (+ PDF) — full business plan: mission, problem, product, market, competition, business model, GTM, ops/tech/governance, financials, risks, the ask.
 - **`FEASIBILITY_STUDY.md`** (+ PDF) — six-dimension feasibility assessment (market / technical / financial / operational / regulatory / commercial), critical assumptions, kill-and-pivot criteria, verdict (**Conditional Go**), and a full reference list.
 - **`financial-model.xlsx`** — lean, scenario-based 3-year model (assumptions → costs → funding/revenue → cash → scenarios). All figures illustrative / owner-to-finalise.
-- **`roadmap/`** — the phased roadmap, designed in claude.ai/design (Fable 5) in the CARER aurora theme; exported to HTML / PDF / PNG with slide/section previews.
+- **`roadmap/`** — the phased roadmap, designed in claude.ai/design (Fable 5) in the CARER aurora theme:
+  - `roadmap/carer-roadmap.html` — self-contained standalone export (777KB)
+  - `roadmap/carer-roadmap.pdf` — A4 landscape print (5 pages, 361KB)
+  - `roadmap/carer-roadmap-full.png` — full-page PNG at 1440px wide × 3629px tall, @2× (1.6MB)
 
 ## Headline
 CARER is **feasible to build, govern, and launch**; demand is large and verified (~69m UK+US carers, ~63% report caring harms their mental health). The two genuine unknowns are **retention** (vs the category norm of heavy D90 drop-off) and the **funding-to-partnership bridge** (grants → mission seed → B2B2C revenue). The plan is structured to test both early and cheaply. On-device AI makes the free model economically feasible (marginal cost ≈ £0).
