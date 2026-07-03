@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility Statement | CARER by Wellnetix Ltd</title>
+  <meta name="description" content="Accessibility statement for the CARER website and app. Our commitment to WCAG 2.2 AA, what we've done, known limitations, and how to give feedback.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Accessibility Statement | CARER by Wellnetix Ltd">
+  <meta property="og:site_name" content="CARER">
+  <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <defs>
+    <radialGradient id="aurora" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#F6D0A6"/>
+      <stop offset="45%" stop-color="#ED9F9E"/>
+      <stop offset="100%" stop-color="#C6ABDE"/>
+    </radialGradient>
+  </defs>
+</svg>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="CARER — home">
+    <svg viewBox="0 0 100 100" width="34" height="34" fill="none" stroke="#A8663C" stroke-width="14.5" stroke-linecap="round" aria-hidden="true">
+      <path d="M71.85 76.04 A34 34 0 1 1 71.85 23.96"/>
+      <circle cx="54.5" cy="56" r="7" fill="url(#aurora)" stroke="none"/>
+    </svg>
+    <span class="nav-wordmark">carer</span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="how-it-works.html">How it works</a></li>
+    <li><a href="features.html">Features</a></li>
+    <li><a href="product.html">Product</a></li>
+    <li><a href="who-its-for.html">Who it's for</a></li>
+    <li><a href="privacy.html">Privacy</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a href="mailto:nimind@wellnetixltd.com?subject=CARER%20early%20access" class="btn btn-primary nav-cta">Join early access</a>
+</nav>
+
+<main id="main">
+
+  <header class="legal-hero">
+    <p class="overline">Legal</p>
+    <h1>Accessibility Statement</h1>
+    <p>Our commitment to making CARER usable by everyone — and where we still have work to do.</p>
+    <p class="legal-updated">Last updated: 3 July 2026 · Prepared by: Wellnetix Ltd</p>
+  </header>
+
+  <div class="legal-wrap">
+
+    <nav class="legal-toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#a1">Our commitment</a></li>
+        <li><a href="#a2">What we have done</a></li>
+        <li><a href="#a3">Known limitations</a></li>
+        <li><a href="#a4">Feedback and contact</a></li>
+        <li><a href="#a5">Enforcement</a></li>
+        <li><a href="#a6">Preparation of this statement</a></li>
+      </ol>
+    </nav>
+
+    <section class="legal-section" id="a1">
+      <h2>1. Our commitment</h2>
+      <p><strong>Wellnetix Ltd</strong> is committed to making the CARER website and app accessible to as many people as possible, including people with disabilities, long-term health conditions, or those using assistive technology.</p>
+      <p>We aim to meet the <strong>Web Content Accessibility Guidelines (WCAG) 2.2 level AA</strong> for the CARER website. Accessibility is not an afterthought — CARER is built for people who are often under significant strain, and ease of use is part of the product's core purpose.</p>
+      <p>If you find anything on this site or in the app difficult to use, please tell us. We take accessibility feedback seriously and aim to respond within <strong>1 working day</strong>.</p>
+    </section>
+
+    <section class="legal-section" id="a2">
+      <h2>2. What we have done</h2>
+      <p>The following accessibility features have been built into the CARER website:</p>
+
+      <h3>Keyboard navigation</h3>
+      <p>The entire website can be navigated using a keyboard alone. Interactive elements (links, buttons, navigation items) receive a visible focus indicator when they receive keyboard focus. No content or functionality is keyboard-inaccessible.</p>
+
+      <h3>Skip link</h3>
+      <p>A "Skip to main content" link is present at the top of every page. It becomes visible when focused via keyboard, allowing screen-reader and keyboard users to bypass the navigation and jump directly to the page content.</p>
+
+      <h3>Semantic HTML structure</h3>
+      <p>Pages use semantic HTML5 landmark elements: <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;article&gt;</code> where appropriate. These help screen-reader users understand and navigate the page structure.</p>
+
+      <h3>ARIA labels and roles</h3>
+      <ul>
+        <li>The main navigation has <code>aria-label="Main navigation"</code>.</li>
+        <li>The current page is indicated with <code>aria-current="page"</code> on the active navigation link.</li>
+        <li>Decorative SVG icons (logos, blobs) carry <code>aria-hidden="true"</code> so they are not announced to screen readers.</li>
+        <li>The mobile hamburger menu button has an <code>aria-label</code> and <code>aria-expanded</code> attribute that is updated when the menu is opened or closed.</li>
+        <li>Lists used for navigation and feature cards use <code>role="list"</code> to preserve list semantics in browsers that remove them from CSS-styled lists.</li>
+        <li>The footer has <code>aria-label="Site footer"</code>.</li>
+      </ul>
+
+      <h3>Colour contrast</h3>
+      <p>The site's colour palette (clay/cream/dawn) has been chosen with readability in mind. Body text uses a dark clay colour (<code>#4A362A</code>) on a warm cream background (<code>#FAF2E8</code>), which meets WCAG 2.2 AA contrast requirements for normal text (4.5:1). Heading and muted text colours have been checked for sufficient contrast against their backgrounds.</p>
+      <p class="legal-note">The main body text colour (#4A362A on #FAF2E8) has been verified to exceed the 4.5:1 AA contrast ratio. A full audit covering all interactive states, card variants, and muted text is included in the known limitations below, and will be completed before public launch.</p>
+
+      <h3>Reduced-motion support</h3>
+      <p>CARER uses decorative background animations (the "dawn" gradient blobs) and scroll-reveal transitions. All animations are suppressed when the user has enabled the "reduce motion" preference in their operating system (<code>prefers-reduced-motion: reduce</code>). The JavaScript scroll-reveal is also skipped entirely when this preference is active.</p>
+
+      <h3>Responsive design</h3>
+      <p>The site is fully responsive and adapts to all common viewport widths, from mobile phones to desktop monitors. Text reflows naturally and does not require horizontal scrolling on small screens.</p>
+
+      <h3>Text sizing</h3>
+      <p>Font sizes use CSS <code>clamp()</code> functions and relative units (<code>rem</code>), which means text can be resized using browser settings without breaking the layout.</p>
+
+      <h3>FAQ accordion</h3>
+      <p>The FAQ page uses native HTML <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements for the accordion pattern. These have built-in keyboard accessibility and screen-reader support without requiring custom JavaScript.</p>
+
+      <h3>Link clarity</h3>
+      <p>Links are descriptive and meaningful out of context. We avoid vague link text such as "click here" or "read more" without context.</p>
+
+      <h3>Page titles</h3>
+      <p>Every page has a distinct, descriptive <code>&lt;title&gt;</code> element to help users identify the page in browser history, tabs, and screen-reader announcements.</p>
+
+      <h3>Language</h3>
+      <p>The HTML <code>lang="en"</code> attribute is set on every page, helping screen readers use the correct pronunciation rules.</p>
+    </section>
+
+    <section class="legal-section" id="a3">
+      <h2>3. Known limitations</h2>
+      <p>We are aware of the following areas where accessibility may not yet be fully achieved:</p>
+      <ul>
+        <li><strong>Formal audit not yet completed.</strong> The site has been built with accessibility in mind and this statement is based on an internal self-assessment. It has not yet been independently audited by an external accessibility specialist against WCAG 2.2 AA. We will commission a formal audit before or shortly after public launch and publish the results here.</li>
+        <li><strong>Colour contrast — full verification pending.</strong> The main text colour has been verified at AA (see §2). A complete programmatic audit covering all interactive states, button variants, card backgrounds, and muted-text colours has not yet been completed and is planned before public launch.</li>
+        <li><strong>Assistive-technology testing.</strong> Automated testing (browser dev tools and axe-core checks) has been used during development. Full manual testing with assistive technologies — VoiceOver (iOS/macOS), NVDA, and JAWS — has not yet been completed and is planned before public launch.</li>
+        <li><strong>PDF or document downloads.</strong> If any PDFs or downloadable documents are added to the site in future, they will need their own accessibility review.</li>
+      </ul>
+      <p>If you encounter an accessibility problem not listed here, please tell us — we want to know.</p>
+    </section>
+
+    <section class="legal-section" id="a4">
+      <h2>4. Feedback and contact</h2>
+      <p>If you experience any difficulty using the CARER website or app, or if you find content that is not accessible to you, please contact us:</p>
+      <ul>
+        <li>Email: <a href="mailto:nimind@wellnetixltd.com?subject=CARER%20accessibility">nimind@wellnetixltd.com</a></li>
+        <li>Subject line: "Accessibility"</li>
+      </ul>
+      <p>We aim to respond to accessibility feedback within <strong>1 working day</strong>, and to resolve identified issues as quickly as possible.</p>
+      <p>If you need information from this website in an alternative format (for example, larger text, a different colour scheme, or a different file format), please let us know and we will do our best to help.</p>
+    </section>
+
+    <section class="legal-section" id="a5">
+      <h2>5. Enforcement</h2>
+      <p>If you are not satisfied with our response to your accessibility concern, you can contact the <strong>Equality Advisory and Support Service (EASS)</strong>:</p>
+      <ul>
+        <li>Website: <a href="https://www.equalityadvisoryservice.com" rel="noopener noreferrer">equalityadvisoryservice.com</a></li>
+        <li>Phone: 0808 800 0082</li>
+        <li>Textphone: 0808 800 0084</li>
+      </ul>
+      <p>The <strong>Equality and Human Rights Commission (EHRC)</strong> is responsible for enforcing the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018 in Great Britain. If this applies to Wellnetix Ltd, we will comply with its requirements.</p>
+    </section>
+
+    <section class="legal-section" id="a6">
+      <h2>6. Preparation of this statement</h2>
+      <p>This statement was prepared on <strong>3 July 2026</strong> by <strong>Wellnetix Ltd</strong>.</p>
+      <p>It is based on a self-assessment of the CARER website conducted at the time of writing. It will be reviewed and updated as the site develops and as formal audit results are available.</p>
+      <p>Next planned review: <strong>3 January 2027</strong>, or earlier if a formal audit is completed or if significant changes are made to the site.</p>
+    </section>
+
+  </div>
+
+</main>
+
+<footer class="site-footer" aria-label="Site footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo" aria-label="CARER home">
+        <svg viewBox="0 0 100 100" width="28" height="28" fill="none" stroke="#A8663C" stroke-width="14.5" stroke-linecap="round" aria-hidden="true">
+          <path d="M71.85 76.04 A34 34 0 1 1 71.85 23.96"/>
+          <circle cx="54.5" cy="56" r="7" fill="url(#aurora)" stroke="none"/>
+        </svg>
+        <span class="footer-wordmark">carer</span>
+      </a>
+      <p class="footer-tagline">A little light, kept.</p>
+      <p class="footer-desc">A warm, private, non-clinical companion for unpaid family carers. Built in the UK, with and for carers.</p>
+      <p class="footer-entity">CARER is a product of Wellnetix Ltd, United Kingdom.</p>
+    </div>
+    <div class="footer-col">
+      <h4>CARER</h4>
+      <ul role="list">
+        <li><a href="how-it-works.html">How it works</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="product.html">Product</a></li>
+    <li><a href="who-its-for.html">Who it's for</a></li>
+        <li><a href="principles.html">Our approach</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul role="list">
+        <li><a href="safety.html">Get urgent help</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Trust</h4>
+      <ul role="list">
+        <li><a href="privacy.html">Privacy promise</a></li>
+        <li><a href="principles.html">Our principles</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul role="list">
+        <li><a href="privacy-notice.html">Privacy notice</a></li>
+        <li><a href="terms.html">Terms of use</a></li>
+        <li><a href="cookies.html">Cookie policy</a></li>
+        <li><a href="accessibility.html" aria-current="page">Accessibility</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-crisis">CARER is not an emergency or medical service and does not provide medical advice. In an emergency, call <strong>999</strong>. For urgent support, see <a href="safety.html">Get urgent help</a>.</p>
+    <div class="footer-legal">
+      <span>© 2026 Wellnetix Ltd, United Kingdom. All rights reserved.</span>
+      <span>Contact: <a href="mailto:nimind@wellnetixltd.com">nimind@wellnetixltd.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

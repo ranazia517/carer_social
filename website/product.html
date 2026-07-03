@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — See CARER in Action | CARER by Wellnetix Ltd</title>
+  <meta name="description" content="See what CARER looks and feels like — a warm, private companion for unpaid family carers. Real screens, real conversations, no scores.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Product — See CARER in Action">
+  <meta property="og:description" content="A warm, private companion for unpaid family carers. See every screen — from first welcome to crisis support, all on your device.">
+  <meta property="og:site_name" content="CARER">
+  <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    /* ── Product / Carousel page styles ──────────────────────────────── */
+
+    .product-hero {
+      padding: 96px 24px 56px;
+      text-align: center;
+      background: linear-gradient(180deg, var(--hero-top) 0%, var(--cream) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .product-hero .dawn-wrap { z-index: 0; }
+    .product-hero-inner { position: relative; z-index: 1; max-width: 660px; margin: 0 auto; }
+    .product-hero h1 {
+      font-family: Lora, serif;
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      color: var(--heading);
+      line-height: 1.22;
+      margin-bottom: 16px;
+    }
+    .product-hero p {
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--text-mid);
+      max-width: 520px;
+      margin: 0 auto 28px;
+    }
+
+    /* ── Carousel section ────────────────────────────────────────────── */
+    .carousel-section {
+      padding: 0 0 72px;
+      position: relative;
+    }
+
+    .carousel {
+      position: relative;
+      user-select: none;
+    }
+
+    /* Stage: clips track, shows neighbors peeking */
+    .carousel-stage {
+      overflow: hidden;
+      padding: 60px 0 40px;
+      position: relative;
+    }
+
+    /* Aurora glow blob behind center phone */
+    .carousel-stage::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 420px;
+      height: 700px;
+      background: radial-gradient(ellipse at center,
+        rgba(246, 208, 166, 0.38) 0%,
+        rgba(237, 159, 158, 0.22) 40%,
+        rgba(198, 171, 222, 0.14) 70%,
+        transparent 100%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(32px);
+    }
+
+    .carousel-track {
+      display: flex;
+      will-change: transform;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Each slide: slightly wider than phone to create padding between phones */
+    .carousel-slide {
+      flex: 0 0 var(--slide-w, 340px);
+      padding: 0 20px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      transition: opacity 0.45s ease, transform 0.45s ease;
+      opacity: 0.44;
+      transform: scale(0.88);
+      cursor: pointer;
+    }
+    .carousel-slide.active {
+      opacity: 1;
+      transform: scale(1);
+      cursor: default;
+    }
+
+    /* Phone frame */
+    .phone-frame {
+      width: 280px;
+      height: auto;
+      border-radius: 44px;
+      background: #F5EDE4;
+      padding: 6px;
+      box-shadow:
+        0 2px 6px rgba(0,0,0,0.06),
+        0 8px 24px rgba(0,0,0,0.10),
+        0 24px 60px rgba(0,0,0,0.14),
+        inset 0 0 0 1.5px rgba(0,0,0,0.09);
+      position: relative;
+    }
+    /* Subtle side-button hints */
+    .phone-frame::before {
+      content: '';
+      position: absolute;
+      left: -4px;
+      top: 130px;
+      width: 3.5px;
+      height: 70px;
+      background: rgba(0,0,0,0.13);
+      border-radius: 2px;
+      box-shadow: 0 90px 0 rgba(0,0,0,0.13);
+    }
+    .phone-frame::after {
+      content: '';
+      position: absolute;
+      right: -4px;
+      top: 175px;
+      width: 3.5px;
+      height: 90px;
+      background: rgba(0,0,0,0.13);
+      border-radius: 2px;
+    }
+    .phone-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 38px;
+      image-rendering: -webkit-optimize-contrast;
+    }
+
+    /* ── Caption ─────────────────────────────────────────────────────── */
+    .carousel-caption {
+      text-align: center;
+      padding: 0 24px;
+      min-height: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .carousel-caption-tag {
+      display: inline-block;
+      font-family: Inter, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brand);
+      background: rgba(168, 102, 60, 0.1);
+      border-radius: 20px;
+      padding: 3px 10px;
+    }
+    .carousel-caption-title {
+      font-family: Lora, serif;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: var(--heading);
+      margin: 0;
+      line-height: 1.4;
+    }
+    .carousel-caption-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 460px;
+      margin: 0;
+    }
+
+    /* ── Arrows ──────────────────────────────────────────────────────── */
+    .carousel-arrows {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .carousel-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1.5px solid var(--border);
+      background: rgba(255,252,247,0.9);
+      color: var(--text);
+      font-size: 20px;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+      backdrop-filter: blur(8px);
+    }
+    .carousel-btn:hover { background: var(--cream); border-color: var(--brand-mid); transform: scale(1.06); }
+    .carousel-btn:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+    .carousel-btn:disabled { opacity: 0.35; cursor: default; transform: none; }
+
+    /* ── Dots ────────────────────────────────────────────────────────── */
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      padding: 0 24px;
+    }
+    .carousel-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      border: none;
+      background: var(--border);
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.25s ease, width 0.25s ease, border-radius 0.25s ease;
+      flex-shrink: 0;
+    }
+    .carousel-dot.active {
+      background: var(--brand);
+      width: 22px;
+      border-radius: 4px;
+    }
+    .carousel-dot:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+
+    /* ── Slide counter ───────────────────────────────────────────────── */
+    .carousel-counter {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 12px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ── Feature highlights below carousel ───────────────────────────── */
+    .product-highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 860px;
+      margin: 56px auto 0;
+      padding: 0 24px;
+    }
+    .highlight-card {
+      background: rgba(255,252,247,0.7);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px 22px 20px;
+    }
+    .highlight-card .highlight-icon {
+      font-size: 20px;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .highlight-card h3 {
+      font-family: Lora, serif;
+      font-size: 1rem;
+      color: var(--heading);
+      margin-bottom: 6px;
+    }
+    .highlight-card p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* ── Responsive ──────────────────────────────────────────────────── */
+    @media (max-width: 700px) {
+      .carousel-stage::before { width: 260px; height: 480px; }
+      .phone-frame { width: 230px; border-radius: 36px; }
+      .phone-frame img { border-radius: 30px; }
+      .carousel-slide { flex: 0 0 270px; }
+    }
+    @media (max-width: 480px) {
+      .phone-frame { width: 200px; border-radius: 32px; }
+      .phone-frame img { border-radius: 26px; }
+      .carousel-slide { flex: 0 0 240px; }
+    }
+
+    /* ── Reduced-motion overrides ────────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      .carousel-track { transition: none !important; }
+      .carousel-slide { transition: none !important; }
+      .carousel-btn { transition: none !important; }
+      .carousel-dot { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <defs>
+    <radialGradient id="aurora" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#F6D0A6"/>
+      <stop offset="45%" stop-color="#ED9F9E"/>
+      <stop offset="100%" stop-color="#C6ABDE"/>
+    </radialGradient>
+  </defs>
+</svg>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="CARER — home">
+    <svg viewBox="0 0 100 100" width="34" height="34" fill="none" stroke="#A8663C" stroke-width="14.5" stroke-linecap="round" aria-hidden="true">
+      <path d="M71.85 76.04 A34 34 0 1 1 71.85 23.96"/>
+      <circle cx="54.5" cy="56" r="7" fill="url(#aurora)" stroke="none"/>
+    </svg>
+    <span class="nav-wordmark">carer</span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="how-it-works.html">How it works</a></li>
+    <li><a href="features.html">Features</a></li>
+    <li><a href="product.html" aria-current="page">Product</a></li>
+    <li><a href="who-its-for.html">Who it's for</a></li>
+    <li><a href="privacy.html">Privacy</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a href="mailto:nimind@wellnetixltd.com?subject=CARER%20early%20access" class="btn btn-primary nav-cta">Join early access</a>
+</nav>
+
+<main id="main">
+
+  <header class="product-hero">
+    <div class="dawn-wrap" aria-hidden="true">
+      <div class="dawn-blob dawn-1"></div>
+      <div class="dawn-blob dawn-2"></div>
+      <div class="dawn-blob dawn-3"></div>
+      <div class="dawn-blob dawn-4"></div>
+    </div>
+    <div class="product-hero-inner">
+      <p class="overline">Inside CARER</p>
+      <h1>Warm, private, and quietly alive.</h1>
+      <p>Every screen built for the carer — not the clinician, not the employer, not the researcher. This is what CARER looks and feels like.</p>
+      <a href="mailto:nimind@wellnetixltd.com?subject=CARER%20early%20access" class="btn btn-primary">Join early access</a>
+    </div>
+  </header>
+
+  <!-- ── Carousel ──────────────────────────────────────────────────── -->
+  <section class="carousel-section" aria-label="App screen gallery">
+
+    <div
+      class="carousel"
+      id="carer-carousel"
+      role="region"
+      aria-label="CARER app screens — 14 screens"
+      aria-roledescription="carousel"
+    >
+      <div class="carousel-stage" id="carousel-stage">
+        <div class="carousel-track" id="carousel-track">
+
+          <!-- Slide 1 -->
+          <div class="carousel-slide active" role="group" aria-roledescription="slide" aria-label="1 of 14">
+            <div class="phone-frame">
+              <img src="assets/img/screens/screen-01-welcome.png" alt="CARER welcome screen: 'a companion for you, for the long road' on a warm aurora background" loading="eager">
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 of 14">
+            <div class="phone-frame">
+              <img src="assets/img/screens/screen-04-companion.png" alt="CARER companion home: morning message, memory card surfacing a past moment, conversation continuing" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 of 14">
+            <div class="phone-frame">
+              <img src="assets/img/screens/screen-03-first-exchange.png" alt="CARER first exchange screen: the companion listening, the carer typing mid-thought, no prompt needed" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="4 of 14">
+            <div class="phone-frame">
+              <img src="assets/img/screens/screen-12-memory.png" alt="CARER inline memory card: your words from months ago, surfaced gently at the right moment" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="5 of 14">
+            <div class="phone-frame">
+              <img src="assets/img/screens/screen-06-journey.png" alt="CARER journey screen: a quiet timeline of your experiences, in your own words, no graphs" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Slide 6 -->
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="6 of 14">
+            <div class="phone-frame">
+              <img src="assets/img/screens/screen-05-private-space.png" alt="CARER private space: 'the things you can't say anywhere else' — a separate space for the feelings you can't put on your family" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Slide 7 -->
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="7 of 14">
+            <div class="phone-frame">
+              <img src="assets/img/screens/screen-07-grief.png" alt="CARER grief space: holds anticipatory grief and ambiguous loss — the feelings with no finish line" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Slide 8 -->
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="8 of 14">
+            <div class="phone-frame">
+              <img src="assets/img/screens/screen-10-reflection.png" alt="CARER reflection screen: 'a moment for you' — how resourced do you feel, held as a feeling not a score" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Slide 9 -->
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="9 of 14">
+            <div class="phone-frame">
+              <img src="assets/img/screens/screen-08-crisis.png" alt="CARER crisis sheet: 'you're not alone' — free crisis support, always one tap away, works offline" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Slide 10 -->
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="10 of 14">
+            <div class="phone-frame">
+              <img src="assets/img/screens/screen-14-ondevice.png" alt="CARER on-device setup: private chat model downloads once, runs entirely on your phone" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Slide 11 -->
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="11 of 14">
+            <div class="phone-frame">
+              <img src="assets/img/screens/screen-09-settings.png" alt="CARER settings and privacy: see everything, change everything, export or delete at any time" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Slide 12 -->
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="12 of 14">
+            <div class="phone-frame">
+              <img src="assets/img/screens/screen-11-notifications.png" alt="CARER gentle check-in notification: 'it's late — i'm still here' — opt-in, never pushy" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Slide 13 -->
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="13 of 14">
+            <div class="phone-frame">
+              <img src="assets/img/screens/screen-02-scope.png" alt="CARER honest scope screen: 'a few things worth knowing' — not therapy, not medical, not emergency" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Slide 14 -->
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="14 of 14">
+            <div class="phone-frame">
+              <img src="assets/img/screens/screen-13-signpost.png" alt="CARER disease-aware signpost sheet: points to the right carer organisations for a condition, never gives medical advice" loading="lazy">
+            </div>
+          </div>
+
+        </div><!-- /track -->
+      </div><!-- /stage -->
+
+      <!-- Caption -->
+      <div class="carousel-caption" aria-live="polite" aria-atomic="true" id="carousel-caption">
+        <span class="carousel-caption-tag" id="cap-tag">Welcome</span>
+        <p class="carousel-caption-title" id="cap-title">A companion for you, for the long road</p>
+        <p class="carousel-caption-text" id="cap-text">The first thing you see: a warm open door, a quiet promise. No forms, no quiz, no goal to set.</p>
+      </div>
+
+      <!-- Arrows -->
+      <div class="carousel-arrows">
+        <button class="carousel-btn" id="carousel-prev" aria-label="Previous screen" aria-controls="carousel-track">‹</button>
+        <button class="carousel-btn" id="carousel-next" aria-label="Next screen" aria-controls="carousel-track">›</button>
+      </div>
+
+      <!-- Dots -->
+      <div class="carousel-dots" role="tablist" aria-label="Go to screen" id="carousel-dots"></div>
+
+      <!-- Counter -->
+      <p class="carousel-counter" id="carousel-counter" aria-hidden="true">1 / 14</p>
+
+    </div><!-- /carousel -->
+
+    <!-- Feature highlights -->
+    <div class="product-highlights" data-reveal>
+      <div class="highlight-card">
+        <span class="highlight-icon" aria-hidden="true">◆</span>
+        <h3>On your device, offline</h3>
+        <p>The companion AI runs entirely on your phone. Your words can stay completely private — no server needed.</p>
+      </div>
+      <div class="highlight-card">
+        <span class="highlight-icon" aria-hidden="true">❦</span>
+        <h3>Remembers in your words</h3>
+        <p>CARER keeps a memory of what you've shared and surfaces it gently — in your own words, at the right moment.</p>
+      </div>
+      <div class="highlight-card">
+        <span class="highlight-icon" aria-hidden="true">◯</span>
+        <h3>Crisis always one tap away</h3>
+        <p>Free, offline, before sign-in. Crisis support is built into the app — always there, whatever else is happening.</p>
+      </div>
+      <div class="highlight-card">
+        <span class="highlight-icon" aria-hidden="true">∅</span>
+        <h3>No score. Never.</h3>
+        <p>CARER never measures, rates, or diagnoses you. No burnout score, no mood graph, no performance for anyone to see.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CTA band -->
+  <section class="cta-band" aria-labelledby="product-cta-h">
+    <div class="dawn-wrap" aria-hidden="true">
+      <div class="dawn-blob dawn-5"></div>
+      <div class="dawn-blob dawn-6"></div>
+      <div class="dawn-blob dawn-7"></div>
+    </div>
+    <div class="cta-band-inner">
+      <h2 id="product-cta-h">Whenever you're ready, we're here.</h2>
+      <p>CARER is free during early access. Come in and put something down.</p>
+      <a href="mailto:nimind@wellnetixltd.com?subject=CARER%20early%20access" class="btn btn-primary btn-primary-lg">Join early access</a>
+      <p style="margin-top:12px; font-size:13px; color:var(--text-muted); opacity:0.8">Coming soon to iOS &amp; Android</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" aria-label="Site footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo" aria-label="CARER home">
+        <svg viewBox="0 0 100 100" width="28" height="28" fill="none" stroke="#A8663C" stroke-width="14.5" stroke-linecap="round" aria-hidden="true">
+          <path d="M71.85 76.04 A34 34 0 1 1 71.85 23.96"/>
+          <circle cx="54.5" cy="56" r="7" fill="url(#aurora)" stroke="none"/>
+        </svg>
+        <span class="footer-wordmark">carer</span>
+      </a>
+      <p class="footer-tagline">A little light, kept.</p>
+      <p class="footer-desc">A warm, private, non-clinical companion for unpaid family carers. Built in the UK, with and for carers.</p>
+      <p class="footer-entity">CARER is a product of Wellnetix Ltd, United Kingdom.</p>
+    </div>
+    <div class="footer-col">
+      <h4>CARER</h4>
+      <ul role="list">
+        <li><a href="how-it-works.html">How it works</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="who-its-for.html">Who it's for</a></li>
+        <li><a href="principles.html">Our approach</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul role="list">
+        <li><a href="safety.html">Get urgent help</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Trust</h4>
+      <ul role="list">
+        <li><a href="privacy.html">Privacy promise</a></li>
+        <li><a href="principles.html">Our principles</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul role="list">
+        <li><a href="privacy-notice.html">Privacy notice</a></li>
+        <li><a href="terms.html">Terms of use</a></li>
+        <li><a href="cookies.html">Cookie policy</a></li>
+        <li><a href="accessibility.html">Accessibility</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-crisis">CARER is not an emergency or medical service and does not provide medical advice. In an emergency, call <strong>999</strong>. For urgent support, see <a href="safety.html">Get urgent help</a>.</p>
+    <div class="footer-legal">
+      <span>© 2026 Wellnetix Ltd, United Kingdom. All rights reserved.</span>
+      <span>Contact: <a href="mailto:nimind@wellnetixltd.com">nimind@wellnetixltd.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+<script>
+(function () {
+  /* ── Slide data ──────────────────────────────────────────────────── */
+  const SLIDES = [
+    {
+      tag: 'Welcome',
+      title: 'A companion for you, for the long road',
+      text: 'The first thing you see: a warm open door, a quiet promise. No forms, no quiz, no goal to set.',
+    },
+    {
+      tag: 'Companion',
+      title: 'Pick up where you left off',
+      text: 'A morning message that knows you. CARER remembers — you never have to start from scratch or update a stranger.',
+    },
+    {
+      tag: 'First conversation',
+      title: 'Something to say, someone to say it to',
+      text: 'No prompt needed. Start mid-thought. The companion follows without asking you to set a goal first.',
+    },
+    {
+      tag: 'Memory',
+      title: 'Your words, remembered',
+      text: 'CARER surfaces something you said weeks ago — in your exact words, gently, at the right moment.',
+    },
+    {
+      tag: 'Journey',
+      title: 'A quiet map of where you\'ve been',
+      text: 'Your journey in your own words. No graphs, no scores — just a record of what you\'ve carried.',
+    },
+    {
+      tag: 'Private space',
+      title: 'The things you can\'t say anywhere else',
+      text: 'A separate space for the feelings you can\'t put on your family. Held here — and nowhere else.',
+    },
+    {
+      tag: 'Grief space',
+      title: 'The grief that doesn\'t have a name yet',
+      text: 'Anticipatory grief. Ambiguous loss. CARER holds the feelings with no finish line, without pushing you toward closure.',
+    },
+    {
+      tag: 'Reflection',
+      title: 'A moment for you — no number attached',
+      text: 'How resourced do you feel right now? Held as a feeling, never turned into a score or a data point.',
+    },
+    {
+      tag: 'Crisis support',
+      title: 'You\'re not alone — always one tap away',
+      text: 'Free, offline, before sign-in. Crisis support is built in — always there, whatever else is happening.',
+    },
+    {
+      tag: 'On-device AI',
+      title: 'Private chat, on your phone',
+      text: 'The model downloads once over Wi-Fi and runs entirely on your device. Your words never leave your phone.',
+    },
+    {
+      tag: 'Privacy controls',
+      title: 'You\'re in control, always',
+      text: 'See everything, change everything. Export or delete all of it — at any time, with one tap.',
+    },
+    {
+      tag: 'Check-ins',
+      title: 'It\'s late — I\'m still here',
+      text: 'Opt-in gentle check-ins that feel like a friend remembering you, not an app nudging engagement.',
+    },
+    {
+      tag: 'Honest scope',
+      title: 'A few things worth knowing',
+      text: 'CARER is honest about what it isn\'t: not therapy, not medical, not an emergency service. That honesty is the point.',
+    },
+    {
+      tag: 'Signpost',
+      title: 'Signposts, never advises',
+      text: 'When you mention a specific condition, CARER points to the right carer-support organisations — and stops there.',
+    },
+  ];
+
+  const TOTAL = SLIDES.length;
+  const AUTOPLAY_DELAY = 5200;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── DOM refs ────────────────────────────────────────────────────── */
+  const track      = document.getElementById('carousel-track');
+  const stage      = document.getElementById('carousel-stage');
+  const slideEls   = Array.from(track.querySelectorAll('.carousel-slide'));
+  const capTag     = document.getElementById('cap-tag');
+  const capTitle   = document.getElementById('cap-title');
+  const capText    = document.getElementById('cap-text');
+  const prevBtn    = document.getElementById('carousel-prev');
+  const nextBtn    = document.getElementById('carousel-next');
+  const dotsWrap   = document.getElementById('carousel-dots');
+  const counter    = document.getElementById('carousel-counter');
+  const carousel   = document.getElementById('carer-carousel');
+
+  let current = 0;
+  let timer   = null;
+
+  /* ── Build dots ──────────────────────────────────────────────────── */
+  const dots = SLIDES.map((s, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    btn.setAttribute('role', 'tab');
+    btn.setAttribute('aria-label', `Screen ${i + 1}: ${s.tag}`);
+    btn.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+    btn.addEventListener('click', () => goTo(i, true));
+    dotsWrap.appendChild(btn);
+    return btn;
+  });
+
+  /* ── Layout: compute slide width and centering offset ────────────── */
+  function getSlideWidth() {
+    return slideEls[0] ? slideEls[0].offsetWidth : 340;
+  }
+
+  function getTrackOffset(index) {
+    const sw     = getSlideWidth();
+    const stageW = stage.offsetWidth;
+    // Center the active slide in the stage
+    return (stageW / 2) - (sw * index) - (sw / 2);
+  }
+
+  function applyTransform(offset, instant) {
+    if (instant || prefersReducedMotion) {
+      track.style.transition = 'none';
+    } else {
+      track.style.transition = 'transform 0.55s cubic-bezier(0.4, 0, 0.2, 1)';
+    }
+    track.style.transform = `translateX(${offset}px)`;
+  }
+
+  /* ── Go to slide ─────────────────────────────────────────────────── */
+  function goTo(index, userTriggered) {
+    const prev = current;
+    current = ((index % TOTAL) + TOTAL) % TOTAL;
+
+    // Update slides
+    slideEls[prev].classList.remove('active');
+    slideEls[current].classList.add('active');
+    slideEls[prev].removeAttribute('aria-current');
+    slideEls[current].setAttribute('aria-current', 'true');
+
+    // Update track position
+    applyTransform(getTrackOffset(current), false);
+
+    // Update caption
+    const s = SLIDES[current];
+    capTag.textContent   = s.tag;
+    capTitle.textContent = s.title;
+    capText.textContent  = s.text;
+
+    // Update dots
+    dots[prev].classList.remove('active');
+    dots[prev].setAttribute('aria-selected', 'false');
+    dots[current].classList.add('active');
+    dots[current].setAttribute('aria-selected', 'true');
+
+    // Update counter
+    counter.textContent = `${current + 1} / ${TOTAL}`;
+
+    // Reset timer if user triggered
+    if (userTriggered) resetTimer();
+  }
+
+  /* ── Autoplay ────────────────────────────────────────────────────── */
+  function startTimer() {
+    if (prefersReducedMotion) return;
+    timer = setInterval(() => goTo(current + 1, false), AUTOPLAY_DELAY);
+  }
+  function stopTimer()  { clearInterval(timer); timer = null; }
+  function resetTimer() { stopTimer(); startTimer(); }
+
+  /* ── Pause on hover / focus ──────────────────────────────────────── */
+  carousel.addEventListener('mouseenter', stopTimer);
+  carousel.addEventListener('mouseleave', startTimer);
+  carousel.addEventListener('focusin',    stopTimer);
+  carousel.addEventListener('focusout',   (e) => {
+    if (!carousel.contains(e.relatedTarget)) startTimer();
+  });
+
+  /* ── Arrow buttons ───────────────────────────────────────────────── */
+  prevBtn.addEventListener('click', () => goTo(current - 1, true));
+  nextBtn.addEventListener('click', () => goTo(current + 1, true));
+
+  /* ── Keyboard ────────────────────────────────────────────────────── */
+  carousel.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); goTo(current - 1, true); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); goTo(current + 1, true); }
+    if (e.key === 'Home')       { e.preventDefault(); goTo(0, true); }
+    if (e.key === 'End')        { e.preventDefault(); goTo(TOTAL - 1, true); }
+  });
+
+  /* ── Touch / pointer drag ────────────────────────────────────────── */
+  let dragStartX = null;
+  let isDragging = false;
+
+  function onDragStart(x) { dragStartX = x; isDragging = true; stopTimer(); }
+  function onDragEnd(x) {
+    if (!isDragging) return;
+    isDragging = false;
+    const diff = dragStartX - x;
+    if (Math.abs(diff) > 48) {
+      goTo(diff > 0 ? current + 1 : current - 1, false);
+    }
+    startTimer();
+    dragStartX = null;
+  }
+
+  // Touch
+  stage.addEventListener('touchstart', (e) => onDragStart(e.touches[0].clientX), { passive: true });
+  stage.addEventListener('touchend',   (e) => onDragEnd(e.changedTouches[0].clientX), { passive: true });
+
+  // Pointer (mouse drag)
+  stage.addEventListener('pointerdown', (e) => { if (e.button === 0) onDragStart(e.clientX); });
+  stage.addEventListener('pointerup',   (e) => { if (isDragging)     onDragEnd(e.clientX); });
+  stage.addEventListener('pointerleave',(e) => { if (isDragging)     onDragEnd(e.clientX); });
+
+  // Neighbor slide click: jump to that slide
+  slideEls.forEach((el, i) => {
+    el.addEventListener('click', () => { if (i !== current) goTo(i, true); });
+  });
+
+  /* ── Initial position (no animation) ────────────────────────────── */
+  function init() {
+    applyTransform(getTrackOffset(0), true);
+    slideEls[0].setAttribute('aria-current', 'true');
+    // Restore transition after a frame
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        track.style.transition = '';
+      });
+    });
+    startTimer();
+  }
+
+  /* ── Reflow on resize ────────────────────────────────────────────── */
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      applyTransform(getTrackOffset(current), true);
+    }, 80);
+  });
+
+  // Init after fonts/images have a moment to settle
+  if (document.readyState === 'complete') {
+    init();
+  } else {
+    window.addEventListener('load', init);
+  }
+
+})();
+</script>
+</body>
+</html>
