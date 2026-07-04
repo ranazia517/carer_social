@@ -83,6 +83,7 @@
 
     .carousel-track {
       display: flex;
+      align-items: flex-start;
       will-change: transform;
       position: relative;
       z-index: 1;
@@ -95,6 +96,7 @@
       box-sizing: border-box;
       display: flex;
       justify-content: center;
+      align-items: flex-start;
       transition: opacity 0.45s ease, transform 0.45s ease;
       opacity: 0.44;
       transform: scale(0.88);
@@ -109,7 +111,7 @@
     /* Phone frame */
     .phone-frame {
       width: 280px;
-      height: auto;
+      aspect-ratio: 780 / 1690;
       border-radius: 44px;
       background: #F5EDE4;
       padding: 6px;
@@ -144,7 +146,9 @@
     }
     .phone-frame img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
       display: block;
       border-radius: 38px;
       image-rendering: -webkit-optimize-contrast;
