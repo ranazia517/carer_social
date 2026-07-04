@@ -226,6 +226,27 @@
   .foot-links a{color:var(--text);transition:color .2s}
   .foot-links a:hover{color:var(--heading)}
 
+  /* ── Contact form ── */
+  .cform{max-width:560px;margin:0 auto;text-align:left}
+  .cform-row{display:flex;gap:14px;margin-bottom:14px}
+  .cform-row input{flex:1;min-width:0}
+  .cform input,.cform textarea{width:100%;padding:14px 16px;border-radius:14px;
+    background:rgba(255,255,255,.04);border:1px solid var(--border-str);color:var(--heading);
+    font:inherit;font-size:15px;transition:border-color .2s,background .2s}
+  .cform input::placeholder,.cform textarea::placeholder{color:var(--muted)}
+  .cform input:focus,.cform textarea:focus{outline:none;border-color:var(--v);background:rgba(155,107,242,.08)}
+  .cform textarea{margin-bottom:16px;resize:vertical;min-height:120px;display:block}
+  .cform-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+  .cform-submit{width:100%;justify-content:center;border:0;cursor:pointer}
+  .cform-submit:disabled{opacity:.6;cursor:default;transform:none}
+  .cform-status{margin:15px 0 0;font-size:14px;text-align:center;min-height:20px;line-height:1.5}
+  .cform-status.ok{color:#83E3B4}
+  .cform-status.err{color:#F3A0B8}
+  .cform-alt{margin:18px 0 0;font-size:13.5px;color:var(--muted);text-align:center}
+  .cform-alt a{color:var(--v)}
+  .cform-alt a:hover{color:var(--p)}
+  @media(max-width:560px){.cform-row{flex-direction:column;gap:14px}}
+
   /* ── Reveal on scroll ── */
   .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
   .reveal.in{opacity:1;transform:none}
@@ -409,8 +430,18 @@
       <div class="contact-card reveal">
         <span class="eyebrow" style="justify-content:center">Let's Work Together</span>
         <h2>Ready to partner with us?</h2>
-        <p class="lead" style="margin:0 auto 32px">Whether you're looking to license our platform, co-develop new tools, or collaborate on research, we're ready to build with you.</p>
-        <a class="btn btn-primary" href="mailto:nimind@wellnetixltd.com">Get in Touch →</a>
+        <p class="lead" style="margin:0 auto 28px">Whether you're looking to license our platform, co-develop new tools, or collaborate on research, we're ready to build with you.</p>
+        <form id="contactForm" class="cform" novalidate>
+          <div class="cform-row">
+            <input type="text" name="name" placeholder="Your name" autocomplete="name" maxlength="120" required>
+            <input type="email" name="email" placeholder="Your email" autocomplete="email" maxlength="160" required>
+          </div>
+          <textarea name="message" rows="4" placeholder="How can we help?" maxlength="5000" required></textarea>
+          <input type="text" name="company" class="cform-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn btn-primary cform-submit">Send message →</button>
+          <p class="cform-status" id="cformStatus" role="status" aria-live="polite"></p>
+        </form>
+        <p class="cform-alt">or email us directly at <a href="mailto:nimind@wellnetixltd.com">nimind@wellnetixltd.com</a></p>
       </div>
     </div>
   </section>
@@ -437,6 +468,30 @@
   var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
   if(t){t.addEventListener('click',function(){l.classList.toggle('open')});
     l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open')})});}
+  // Contact form
+  var cf=document.getElementById('contactForm');
+  if(cf){cf.addEventListener('submit',function(e){
+    e.preventDefault();
+    var st=document.getElementById('cformStatus');
+    var btn=cf.querySelector('.cform-submit');
+    st.className='cform-status';st.textContent='';
+    var fd=new FormData(cf);
+    var nm=(fd.get('name')||'').trim(),em=(fd.get('email')||'').trim(),msg=(fd.get('message')||'').trim();
+    if(!nm||!msg||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){
+      st.classList.add('err');st.textContent='Please add your name, a valid email, and a message.';return;
+    }
+    btn.disabled=true;var ol=btn.textContent;btn.textContent='Sending…';
+    fetch('contact.php?t='+Date.now(),{method:'POST',body:fd,headers:{'Accept':'application/json'},cache:'no-store'})
+      .then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j};}).catch(function(){return{ok:r.ok,j:{}};});})
+      .then(function(res){
+        if(res.ok&&res.j&&res.j.ok){cf.reset();st.classList.add('ok');
+          st.textContent='Thanks — your message is on its way. We’ll reply within a working day.';}
+        else{st.classList.add('err');st.textContent=(res.j&&res.j.error)||'Something went wrong — please email us directly at nimind@wellnetixltd.com.';}
+      })
+      .catch(function(){st.classList.add('err');st.textContent='Network error — please email us at nimind@wellnetixltd.com.';})
+      .then(function(){btn.disabled=false;btn.textContent=ol;});
+  });}
+
   // Scroll reveal
   var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(!rm && 'IntersectionObserver' in window){
