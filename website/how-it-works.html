@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css?v=20260704e">
   <link rel="canonical" href="https://carer.wellnetixltd.com/how-it-works.html">
   <meta property="og:image" content="https://carer.wellnetixltd.com/assets/img/og-card.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -57,75 +57,390 @@
 
 <main id="main">
 
+  <!-- ── HERO ─────────────────────────────────────────────────────── -->
   <header class="hero-page">
     <div class="dawn-wrap" aria-hidden="true">
       <div class="dawn-blob dawn-1"></div>
       <div class="dawn-blob dawn-2"></div>
       <div class="dawn-blob dawn-3"></div>
     </div>
-    <div class="hero-page-inner">
-      <p class="overline">The fuller story</p>
-      <h1>A companion, not a service desk.</h1>
-      <p class="hero-sub">Most things aimed at carers are about tasks. CARER is deliberately not that. It's for the part of caring no one asks about: the inner life of the person doing it.</p>
+    <div class="hero-split">
+      <div class="hero-text">
+        <p class="overline">The fuller story</p>
+        <h1>A companion, not a service desk.</h1>
+        <p class="hero-sub">Most things aimed at carers are about tasks. CARER is deliberately not that. It's for the part of caring no one asks about: the inner life of the person doing it.</p>
+      </div>
+      <div class="hero-fig" aria-hidden="true">
+        <div class="fig-wrap fig-wrap-hero">
+          <!-- Fig 1: Warm doorway / arch + two presence orbs -->
+          <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="hd-arch-glow" cx="50%" cy="70%" r="60%">
+                <stop offset="0%" stop-color="#FDEBD4" stop-opacity="0.98"/>
+                <stop offset="55%" stop-color="#F4CDA6" stop-opacity="0.55"/>
+                <stop offset="100%" stop-color="#E4A79E" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="hd-orb-a" cx="35%" cy="30%" r="68%">
+                <stop offset="0%" stop-color="#FAF2E8"/>
+                <stop offset="65%" stop-color="#F4CDA6" stop-opacity="0.78"/>
+                <stop offset="100%" stop-color="#E4A79E" stop-opacity="0.45"/>
+              </radialGradient>
+              <radialGradient id="hd-orb-b" cx="35%" cy="30%" r="68%">
+                <stop offset="0%" stop-color="#FAF2E8"/>
+                <stop offset="65%" stop-color="#D5A3B2" stop-opacity="0.78"/>
+                <stop offset="100%" stop-color="#D5A3B2" stop-opacity="0.42"/>
+              </radialGradient>
+              <filter id="hd-blur-sm" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="5"/>
+              </filter>
+              <filter id="hd-blur-lg" x="-60%" y="-60%" width="220%" height="220%">
+                <feGaussianBlur stdDeviation="15"/>
+              </filter>
+            </defs>
+            <!-- Interior glow bloom -->
+            <ellipse cx="160" cy="196" rx="72" ry="64" fill="url(#hd-arch-glow)" filter="url(#hd-blur-lg)" class="fig-breathe"/>
+            <!-- Arch outline + translucent fill -->
+            <path d="M 95,248 L 95,155 A 65,65 0 0 0 225,155 L 225,248 Z"
+                  fill="rgba(253,235,212,0.20)" stroke="#A8663C" stroke-width="2.5" stroke-opacity="0.70" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Apex light -->
+            <circle cx="160" cy="144" r="24" fill="#FDEBD4" filter="url(#hd-blur-sm)" class="fig-breathe fig-d1"/>
+            <circle cx="160" cy="144" r="11" fill="rgba(255,255,255,0.92)"/>
+            <!-- Orb connection aura -->
+            <ellipse cx="163" cy="216" rx="56" ry="17" fill="rgba(228,167,158,0.15)" filter="url(#hd-blur-sm)"/>
+            <!-- Large orb (lavender) -->
+            <g class="fig-float fig-d2">
+              <circle cx="190" cy="211" r="27" fill="url(#hd-orb-b)"/>
+              <circle cx="190" cy="211" r="27" stroke="rgba(213,163,178,0.32)" stroke-width="1.5" fill="none"/>
+            </g>
+            <!-- Small orb (peach) -->
+            <g class="fig-float-sm fig-d3">
+              <circle cx="128" cy="219" r="19" fill="url(#hd-orb-a)"/>
+              <circle cx="128" cy="219" r="19" stroke="rgba(228,167,158,0.28)" stroke-width="1.5" fill="none"/>
+            </g>
+            <!-- Rising particles -->
+            <circle cx="148" cy="178" r="2.5" fill="#F4CDA6" class="fig-rise-1"/>
+            <circle cx="170" cy="168" r="2" fill="#D5A3B2" class="fig-rise-2"/>
+            <circle cx="157" cy="157" r="1.8" fill="#E4A79E" class="fig-rise-3"/>
+          </svg>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- 1. A companion, not a service desk -->
-  <section class="section section-narrow" data-reveal aria-labelledby="companion-h">
-    <div class="detail-block">
-      <h2 id="companion-h">A companion, not a service desk</h2>
-      <p>When you open CARER, it doesn't greet you with a form or a goal to set. It opens mid-relationship, ready to listen. It reflects back what you're feeling, holds it, and — only if you want — gently widens the view. It meets the hard feeling first, every time.</p>
-      <p>There's no dashboard, no triage queue, no "how's your mood today?" slider. Just a warm, unhurried space that meets you where you are — at 3am, in a car park, in the five minutes before the school run.</p>
+  <!-- ── 1. A companion, not a service desk ───────────────────────── -->
+  <section class="section-split" data-reveal aria-labelledby="companion-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="companion-h">A companion, not a service desk</h2>
+        <p>When you open CARER, it doesn't greet you with a form or a goal to set. It opens mid-relationship, ready to listen. It reflects back what you're feeling, holds it, and — only if you want — gently widens the view. It meets the hard feeling first, every time.</p>
+        <p>There's no dashboard, no triage queue, no "how's your mood today?" slider. Just a warm, unhurried space that meets you where you are — at 3am, in a car park, in the five minutes before the school run.</p>
+      </div>
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <!-- Fig C: Listening presence — soft auras + defined ripple rings + attending orbs -->
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="ca-aura1" cx="46%" cy="42%" r="56%">
+              <stop offset="0%" stop-color="rgba(244,205,166,0.60)"/>
+              <stop offset="100%" stop-color="rgba(244,205,166,0)"/>
+            </radialGradient>
+            <radialGradient id="ca-aura2" cx="56%" cy="60%" r="56%">
+              <stop offset="0%" stop-color="rgba(213,163,178,0.52)"/>
+              <stop offset="100%" stop-color="rgba(213,163,178,0)"/>
+            </radialGradient>
+            <radialGradient id="ca-seed" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#FDEBD4"/>
+              <stop offset="55%" stop-color="#F4CDA6" stop-opacity="0.85"/>
+              <stop offset="100%" stop-color="#F4CDA6" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="ca-blur" x="-25%" y="-25%" width="150%" height="150%">
+              <feGaussianBlur stdDeviation="15"/>
+            </filter>
+            <filter id="ca-blur-sm" x="-35%" y="-35%" width="170%" height="170%">
+              <feGaussianBlur stdDeviation="6"/>
+            </filter>
+          </defs>
+          <!-- Warm peach aura -->
+          <ellipse cx="140" cy="150" rx="104" ry="98" fill="url(#ca-aura1)" filter="url(#ca-blur)" class="fig-drift"/>
+          <!-- Warm lavender aura -->
+          <ellipse cx="182" cy="176" rx="96" ry="90" fill="url(#ca-aura2)" filter="url(#ca-blur)" class="fig-drift fig-d3"/>
+          <!-- Listening ripples — defined clay rings, faint outward to firm inward -->
+          <circle cx="160" cy="160" r="104" stroke="rgba(168,102,60,0.16)" stroke-width="1.4" fill="none" class="fig-pulse"/>
+          <circle cx="160" cy="160" r="78"  stroke="rgba(168,102,60,0.30)" stroke-width="1.6" fill="none" class="fig-pulse fig-d2"/>
+          <circle cx="160" cy="160" r="52"  stroke="rgba(168,102,60,0.42)" stroke-width="1.8" fill="none"/>
+          <!-- Centre glow -->
+          <circle cx="160" cy="160" r="46" fill="url(#ca-seed)" filter="url(#ca-blur-sm)" class="fig-breathe fig-d1"/>
+          <!-- Defined centre orb -->
+          <circle cx="160" cy="160" r="26" fill="rgba(253,235,212,0.96)" stroke="#A8663C" stroke-width="1.8" stroke-opacity="0.55"/>
+          <circle cx="160" cy="160" r="11" fill="rgba(255,255,255,0.95)"/>
+          <!-- Attending presence orbs on the inner ring -->
+          <circle cx="160" cy="108" r="6"   fill="rgba(228,167,158,0.85)" stroke="rgba(168,102,60,0.28)" stroke-width="1" class="fig-float-sm fig-d1"/>
+          <circle cx="212" cy="160" r="5"   fill="rgba(213,163,178,0.85)" stroke="rgba(168,102,60,0.24)" stroke-width="1" class="fig-float-sm fig-d2"/>
+          <circle cx="160" cy="212" r="5.5" fill="rgba(244,205,166,0.90)" stroke="rgba(168,102,60,0.26)" stroke-width="1" class="fig-float-sm fig-d3"/>
+          <circle cx="108" cy="160" r="4.5" fill="rgba(228,167,158,0.80)" stroke="rgba(168,102,60,0.22)" stroke-width="1" class="fig-float-sm"/>
+        </svg>
+      </div>
     </div>
   </section>
 
-  <!-- 2. Memory -->
-  <section class="section section-narrow" data-reveal aria-labelledby="memory-h">
-    <div class="detail-block">
-      <h2 id="memory-h">It remembers your own words — and never a verdict</h2>
-      <p>The thing carers tell us they'd value most is not having to explain from the beginning every time. So CARER remembers — but only ever <em>your</em> words, exactly as you said them, with when you said them. It might say, <em>"A while ago you mentioned your mum's fall — how are things now?"</em> That's something you once told it, offered back as a gentle prompt.</p>
-      <p>It is never a conclusion CARER has drawn about you. There is no hidden profile, no "pattern" it has spotted, no assessment of how you're doing. Your memory is yours: you can see all of it, edit it, and take it with you.</p>
+  <!-- ── 2. Memory ────────────────────────────────────────────────── -->
+  <section class="section-split split-reverse" data-reveal aria-labelledby="memory-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="memory-h">It remembers your own words — and never a verdict</h2>
+        <p>The thing carers tell us they'd value most is not having to explain from the beginning every time. So CARER remembers — but only ever <em>your</em> words, exactly as you said them, with when you said them. It might say, <em>"A while ago you mentioned your mum's fall — how are things now?"</em> That's something you once told it, offered back as a gentle prompt.</p>
+        <p>It is never a conclusion CARER has drawn about you. There is no hidden profile, no "pattern" it has spotted, no assessment of how you're doing. Your memory is yours: you can see all of it, edit it, and take it with you.</p>
+      </div>
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <!-- Fig 2: Memory thread + pills, one gently offered back -->
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="me-glow" cx="50%" cy="50%" r="55%">
+              <stop offset="0%" stop-color="#FDEBD4" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="#F4CDA6" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="me-blur" x="-55%" y="-45%" width="210%" height="190%">
+              <feGaussianBlur stdDeviation="8"/>
+            </filter>
+          </defs>
+          <!-- Thread — gentle S-curve -->
+          <path d="M 162,32 Q 148,80 163,128 Q 177,176 160,224 Q 150,256 155,295"
+                stroke="rgba(168,102,60,0.28)" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Pill 1 (quiet, peach) -->
+          <rect x="113" y="52" width="68" height="20" rx="10"
+                fill="rgba(244,205,166,0.55)" stroke="rgba(168,102,60,0.20)" stroke-width="1"/>
+          <!-- Pill 2 (medium, rose) -->
+          <rect x="108" y="112" width="78" height="22" rx="11"
+                fill="rgba(228,167,158,0.50)" stroke="rgba(168,102,60,0.18)" stroke-width="1"/>
+          <!-- Pill 3 (quiet, lavender) -->
+          <rect x="116" y="172" width="66" height="20" rx="10"
+                fill="rgba(213,163,178,0.45)" stroke="rgba(168,102,60,0.15)" stroke-width="1"/>
+          <!-- Pill 4 — the glowing offered-back pill -->
+          <g class="fig-float">
+            <ellipse cx="160" cy="248" rx="46" ry="14" fill="url(#me-glow)" filter="url(#me-blur)" class="fig-glow fig-d1"/>
+            <rect x="106" y="232" width="108" height="28" rx="14"
+                  fill="rgba(253,235,212,0.93)" stroke="#A8663C" stroke-width="1.5" stroke-opacity="0.58"/>
+            <path d="M 122,243 Q 160,240 198,243" stroke="rgba(255,255,255,0.55)" stroke-width="1" stroke-linecap="round"/>
+          </g>
+          <!-- Thread node markers -->
+          <circle cx="162" cy="130" r="3.5" fill="rgba(168,102,60,0.22)"/>
+          <circle cx="160" cy="224" r="3" fill="rgba(168,102,60,0.18)"/>
+        </svg>
+      </div>
     </div>
   </section>
 
-  <!-- 3. Grief -->
-  <section class="section section-narrow" data-reveal aria-labelledby="grief-h">
-    <div class="detail-block">
-      <h2 id="grief-h">Grief that has no ending — held, not fixed</h2>
-      <p>Caring often means grieving someone who is still alive — the person they used to be, the future you'd imagined, the version of yourself you had to set aside. CARER treats that grief as real and names it plainly. It holds the "both/and" — that you can love someone deeply <em>and</em> grieve them at the same time; feel relief <em>and</em> devastation in the same breath.</p>
-      <p>It won't push you toward "acceptance," "closure," or "moving on," because some griefs don't work that way, and being told they should only wounds twice. And it doesn't disappear when the caring ends. If you're in the after, CARER is still here — holding the whole story as something that mattered.</p>
+  <!-- ── 3. Grief ──────────────────────────────────────────────────── -->
+  <section class="section-split" data-reveal aria-labelledby="grief-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="grief-h">Grief that has no ending — held, not fixed</h2>
+        <p>Caring often means grieving someone who is still alive — the person they used to be, the future you'd imagined, the version of yourself you had to set aside. CARER treats that grief as real and names it plainly. It holds the "both/and" — that you can love someone deeply <em>and</em> grieve them at the same time; feel relief <em>and</em> devastation in the same breath.</p>
+        <p>It won't push you toward "acceptance," "closure," or "moving on," because some griefs don't work that way, and being told they should only wounds twice. And it doesn't disappear when the caring ends. If you're in the after, CARER is still here — holding the whole story as something that mattered.</p>
+      </div>
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <!-- Fig G: Both/and — two overlapping presence circles -->
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="gr-left" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="rgba(228,167,158,0.58)"/>
+              <stop offset="100%" stop-color="rgba(228,167,158,0)"/>
+            </radialGradient>
+            <radialGradient id="gr-right" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="rgba(213,163,178,0.52)"/>
+              <stop offset="100%" stop-color="rgba(213,163,178,0)"/>
+            </radialGradient>
+            <radialGradient id="gr-overlap" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#FDEBD4" stop-opacity="0.92"/>
+              <stop offset="100%" stop-color="#F4CDA6" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="gr-blur" x="-28%" y="-28%" width="156%" height="156%">
+              <feGaussianBlur stdDeviation="9"/>
+            </filter>
+          </defs>
+          <!-- Left circle (rose) -->
+          <circle cx="118" cy="160" r="84" fill="url(#gr-left)" stroke="rgba(228,167,158,0.55)" stroke-width="2" class="fig-breathe"/>
+          <!-- Right circle (lavender) -->
+          <circle cx="202" cy="160" r="84" fill="url(#gr-right)" stroke="rgba(213,163,178,0.52)" stroke-width="2" class="fig-breathe fig-d2"/>
+          <!-- Overlap warmth -->
+          <ellipse cx="160" cy="160" rx="28" ry="56" fill="url(#gr-overlap)" filter="url(#gr-blur)" class="fig-glow"/>
+          <!-- Defined both/and vesica — the held overlap -->
+          <ellipse cx="160" cy="160" rx="30" ry="64" stroke="rgba(168,102,60,0.30)" stroke-width="1.5" fill="none"/>
+          <!-- Warm centre -->
+          <circle cx="160" cy="160" r="12" fill="rgba(253,235,212,0.96)" stroke="#A8663C" stroke-width="1.6" stroke-opacity="0.5"/>
+          <circle cx="160" cy="160" r="5.5" fill="rgba(255,255,255,0.94)"/>
+        </svg>
+      </div>
     </div>
   </section>
 
-  <!-- 4. Crisis -->
-  <section class="section section-narrow" data-reveal aria-labelledby="crisis-h">
-    <div class="detail-block">
-      <h2 id="crisis-h">Four-directional crisis and safeguarding — outside the model, always on</h2>
-      <p>Some moments need more than a companion. CARER's safety layer is built to catch four kinds of hard moment: when <em>you</em> feel unsafe or don't want to go on; when you're at breaking point; when you're frightened of what the strain might lead you to do to the person you care for; and when the person you care for is hurting <em>you</em>.</p>
-      <p>In every case, CARER responds without shock and without judgement — it validates the <em>feeling</em>, never an <em>act</em> — and puts the right route one tap away. Crucially, this layer sits <strong>outside</strong> the conversation — it works even if the companion is offline, unavailable, or you've never signed in. Help is never paywalled and never more than a tap away.</p>
-      <p style="margin-top:12px"><a href="safety.html" style="color:var(--brand); font-weight:600; text-decoration:underline; text-underline-offset:3px">See urgent support resources →</a></p>
+  <!-- ── 4. Crisis ─────────────────────────────────────────────────── -->
+  <section class="section-split split-reverse" data-reveal aria-labelledby="crisis-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="crisis-h">Four-directional crisis and safeguarding — outside the model, always on</h2>
+        <p>Some moments need more than a companion. CARER's safety layer is built to catch four kinds of hard moment: when <em>you</em> feel unsafe or don't want to go on; when you're at breaking point; when you're frightened of what the strain might lead you to do to the person you care for; and when the person you care for is hurting <em>you</em>.</p>
+        <p>In every case, CARER responds without shock and without judgement — it validates the <em>feeling</em>, never an <em>act</em> — and puts the right route one tap away. Crucially, this layer sits <strong>outside</strong> the conversation — it works even if the companion is offline, unavailable, or you've never signed in. Help is never paywalled and never more than a tap away.</p>
+        <p style="margin-top:12px"><a href="safety.html" style="color:var(--brand); font-weight:600; text-decoration:underline; text-underline-offset:3px">See urgent support resources →</a></p>
+      </div>
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <!-- Fig 3: Rounded shield + 4 rays + outer pulse ring -->
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="cr-centre" cx="50%" cy="45%" r="55%">
+              <stop offset="0%" stop-color="#FDEBD4"/>
+              <stop offset="60%" stop-color="#F4CDA6" stop-opacity="0.65"/>
+              <stop offset="100%" stop-color="#E4A79E" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="cr-fill" cx="50%" cy="38%" r="65%">
+              <stop offset="0%" stop-color="rgba(253,235,212,0.58)"/>
+              <stop offset="100%" stop-color="rgba(244,205,166,0.12)"/>
+            </radialGradient>
+            <filter id="cr-blur" x="-38%" y="-38%" width="176%" height="176%">
+              <feGaussianBlur stdDeviation="7"/>
+            </filter>
+          </defs>
+          <!-- Outer pulse ring -->
+          <g class="fig-pulse">
+            <circle cx="160" cy="162" r="120" stroke="rgba(213,163,178,0.38)" stroke-width="1.5" fill="none"/>
+          </g>
+          <!-- Secondary quiet ring -->
+          <circle cx="160" cy="162" r="102" stroke="rgba(228,167,158,0.20)" stroke-width="1" fill="none"/>
+          <!-- Cardinal rays -->
+          <line x1="160" y1="58" x2="160" y2="97" stroke="#F4CDA6" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="160" cy="55" r="4" fill="#E4A79E" opacity="0.68"/>
+          <line x1="160" y1="227" x2="160" y2="266" stroke="#F4CDA6" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="160" cy="268" r="4" fill="#E4A79E" opacity="0.68"/>
+          <line x1="225" y1="162" x2="264" y2="162" stroke="#F4CDA6" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="266" cy="162" r="4" fill="#E4A79E" opacity="0.68"/>
+          <line x1="95" y1="162" x2="56" y2="162" stroke="#F4CDA6" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="54" cy="162" r="4" fill="#E4A79E" opacity="0.68"/>
+          <!-- Shield body -->
+          <path d="M 160,72 L 218,98 L 234,158 Q 232,220 160,258 Q 88,220 86,158 L 102,98 Z"
+                fill="url(#cr-fill)" stroke="#A8663C" stroke-width="2" stroke-opacity="0.52" stroke-linejoin="round"/>
+          <!-- Centre glow -->
+          <circle cx="160" cy="163" r="44" fill="url(#cr-centre)" filter="url(#cr-blur)" class="fig-breathe"/>
+          <!-- Centre light -->
+          <circle cx="160" cy="163" r="17" fill="rgba(253,235,212,0.96)"/>
+          <circle cx="160" cy="163" r="8" fill="rgba(255,255,255,0.93)"/>
+        </svg>
+      </div>
     </div>
   </section>
 
-  <!-- 5. Signposting -->
-  <section class="section section-narrow" data-reveal aria-labelledby="signpost-h">
-    <div class="detail-block">
-      <h2 id="signpost-h">Signposting to real, human help</h2>
-      <p>CARER is clear about what it is and isn't. When something needs a professional — a clinician, a helpline, a specialist charity — it says so, and points you there. It will never pretend to be your only support. Feeling less alone should lead you <em>toward</em> people, not away from them, so CARER points back to human connection: carer charities and helplines wherever you are, condition-specific organisations, peer communities, and the people in your life.</p>
+  <!-- ── 5. Signposting ────────────────────────────────────────────── -->
+  <section class="section-split" data-reveal aria-labelledby="signpost-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="signpost-h">Signposting to real, human help</h2>
+        <p>CARER is clear about what it is and isn't. When something needs a professional — a clinician, a helpline, a specialist charity — it says so, and points you there. It will never pretend to be your only support. Feeling less alone should lead you <em>toward</em> people, not away from them, so CARER points back to human connection: carer charities and helplines wherever you are, condition-specific organisations, peer communities, and the people in your life.</p>
+      </div>
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <!-- Fig 6: Branching paths — pointing toward human help -->
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="sp-centre" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#FDEBD4"/>
+              <stop offset="75%" stop-color="#F4CDA6" stop-opacity="0.55"/>
+              <stop offset="100%" stop-color="#F4CDA6" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="sp-blur" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="6"/>
+            </filter>
+          </defs>
+          <!-- Origin glow -->
+          <circle cx="160" cy="172" r="36" fill="#F4CDA6" filter="url(#sp-blur)" class="fig-breathe"/>
+          <!-- Curved paths outward -->
+          <path d="M 154,164 Q 126,138 87,108" stroke="rgba(168,102,60,0.34)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <path d="M 166,163 Q 197,133 235,106" stroke="rgba(168,102,60,0.30)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <path d="M 150,170 Q 113,170 75,170" stroke="rgba(168,102,60,0.28)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <path d="M 168,180 Q 200,204 237,222" stroke="rgba(168,102,60,0.25)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <!-- Landing dots -->
+          <circle cx="85" cy="107" r="11" fill="rgba(244,205,166,0.76)" stroke="rgba(168,102,60,0.22)" stroke-width="1.2" class="fig-float-sm fig-d1"/>
+          <circle cx="236" cy="105" r="10" fill="rgba(228,167,158,0.72)" stroke="rgba(168,102,60,0.20)" stroke-width="1.2" class="fig-float-sm fig-d2"/>
+          <circle cx="73" cy="170" r="9" fill="rgba(213,163,178,0.66)" stroke="rgba(168,102,60,0.18)" stroke-width="1.2" class="fig-float fig-d3"/>
+          <circle cx="238" cy="223" r="10" fill="rgba(244,205,166,0.72)" stroke="rgba(168,102,60,0.20)" stroke-width="1.2" class="fig-float-sm"/>
+          <!-- Origin -->
+          <circle cx="160" cy="172" r="19" fill="url(#sp-centre)" stroke="#A8663C" stroke-width="1.8" stroke-opacity="0.52"/>
+          <circle cx="160" cy="172" r="7" fill="rgba(255,255,255,0.92)"/>
+        </svg>
+      </div>
     </div>
   </section>
 
-  <!-- 6. On device -->
-  <section class="section section-narrow" data-reveal aria-labelledby="ondevice-h">
-    <div class="detail-block">
-      <h2 id="ondevice-h">On your device, and private by design</h2>
-      <p>The first time you use CARER, it downloads its companion to your phone over Wi-Fi — once. After that, your conversations run <strong>on your own device</strong>, offline, free. What you say doesn't need to leave your phone at all. If you choose to back things up, that backup is end-to-end encrypted, so even we can't read it.</p>
-      <p>Cloud assistance is switched <strong>off</strong> unless you turn it on. The person you care for is never a subject in CARER — never profiled, tracked, or monitored. This isn't a promise we ask you to take on trust; it's how the product is built.</p>
-      <p style="margin-top:12px"><a href="privacy.html" style="color:var(--brand); font-weight:600; text-decoration:underline; text-underline-offset:3px">Read our full privacy promise →</a></p>
+  <!-- ── 6. On device ──────────────────────────────────────────────── -->
+  <section class="section-split split-reverse" data-reveal aria-labelledby="ondevice-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="ondevice-h">On your device, and private by design</h2>
+        <p>The first time you use CARER, it downloads its companion to your phone over Wi-Fi — once. After that, your conversations run <strong>on your own device</strong>, offline, free. What you say doesn't need to leave your phone at all. If you choose to back things up, that backup is end-to-end encrypted, so even we can't read it.</p>
+        <p>Cloud assistance is switched <strong>off</strong> unless you turn it on. The person you care for is never a subject in CARER — never profiled, tracked, or monitored. This isn't a promise we ask you to take on trust; it's how the product is built.</p>
+        <p style="margin-top:12px"><a href="privacy.html" style="color:var(--brand); font-weight:600; text-decoration:underline; text-underline-offset:3px">Read our full privacy promise →</a></p>
+      </div>
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <!-- Fig 4: Phone + floating dots + lock + faded cloud -->
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="dv-phone" cx="50%" cy="28%" r="70%">
+              <stop offset="0%" stop-color="rgba(253,235,212,0.62)"/>
+              <stop offset="100%" stop-color="rgba(244,205,166,0.18)"/>
+            </radialGradient>
+            <radialGradient id="dv-lock" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#F4CDA6" stop-opacity="0.92"/>
+              <stop offset="100%" stop-color="#F4CDA6" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="dv-blur" x="-55%" y="-55%" width="210%" height="210%">
+              <feGaussianBlur stdDeviation="7"/>
+            </filter>
+          </defs>
+          <!-- Faded cloud above -->
+          <g opacity="0.19">
+            <circle cx="138" cy="66" r="16" fill="#D5A3B2"/>
+            <circle cx="160" cy="59" r="20" fill="#D5A3B2"/>
+            <circle cx="182" cy="66" r="15" fill="#D5A3B2"/>
+            <rect x="122" y="66" width="80" height="18" fill="#D5A3B2"/>
+          </g>
+          <ellipse cx="160" cy="65" rx="46" ry="18" stroke="rgba(168,102,60,0.14)" stroke-width="1.2" stroke-dasharray="4,4" fill="none"/>
+          <!-- Phone body -->
+          <rect x="112" y="82" width="96" height="170" rx="18"
+                fill="url(#dv-phone)" stroke="#A8663C" stroke-width="2.2" stroke-opacity="0.62"/>
+          <!-- Notch -->
+          <rect x="142" y="88" width="36" height="5" rx="2.5" fill="rgba(168,102,60,0.18)"/>
+          <!-- Screen area -->
+          <rect x="118" y="100" width="84" height="136" rx="10" fill="rgba(255,255,255,0.22)"/>
+          <!-- Floating dots -->
+          <circle cx="150" cy="138" r="7.5" fill="#F4CDA6" class="fig-float fig-d1"/>
+          <circle cx="177" cy="152" r="5.5" fill="#E4A79E" class="fig-float-sm fig-d2"/>
+          <circle cx="152" cy="172" r="9" fill="rgba(213,163,178,0.82)" class="fig-float fig-d2"/>
+          <circle cx="175" cy="122" r="4" fill="#F4CDA6" class="fig-float-sm"/>
+          <circle cx="138" cy="160" r="5" fill="rgba(228,167,158,0.72)" class="fig-float fig-d3"/>
+          <!-- Lock glow -->
+          <circle cx="160" cy="280" r="26" fill="url(#dv-lock)" filter="url(#dv-blur)" class="fig-glow"/>
+          <!-- Lock body -->
+          <rect x="146" y="272" width="28" height="21" rx="6"
+                fill="rgba(253,235,212,0.95)" stroke="#A8663C" stroke-width="1.8" stroke-opacity="0.58"/>
+          <!-- Lock shackle -->
+          <path d="M 151,272 L 151,264 Q 151,257 160,257 Q 169,257 169,264 L 169,272"
+                stroke="#A8663C" stroke-width="1.8" stroke-linecap="round" stroke-opacity="0.52" fill="none"/>
+          <!-- Keyhole -->
+          <circle cx="160" cy="282" r="2.5" fill="rgba(168,102,60,0.40)"/>
+        </svg>
+      </div>
     </div>
   </section>
 
-  <!-- CTA band -->
+  <!-- ── CTA band ──────────────────────────────────────────────────── -->
   <section class="cta-band" aria-labelledby="cta-h">
     <div class="dawn-wrap" aria-hidden="true">
       <div class="dawn-blob dawn-5"></div>
@@ -200,6 +515,6 @@
   </div>
 </footer>
 
-<script src="assets/main.js"></script>
+<script src="assets/main.js?v=20260704e"></script>
 </body>
 </html>

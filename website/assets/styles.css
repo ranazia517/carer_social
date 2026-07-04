@@ -820,6 +820,167 @@ details.faq-item[open] summary::after { content: "−"; }
 }
 
 /* ========================
+   SECTION SPLIT LAYOUT
+   ======================== */
+.section-split {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: clamp(28px,4vw,46px) clamp(24px,4vw,48px);
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  gap: 56px;
+  align-items: center;
+}
+.section-split .detail-block { margin-top: 0; }
+.section-split .split-fig {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-split.split-reverse .split-fig { order: -1; }
+
+@media (max-width: 820px) {
+  .section-split {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: clamp(24px,6vw,40px) clamp(20px,5vw,30px);
+  }
+  .section-split .split-fig,
+  .section-split.split-reverse .split-fig { order: -1; }
+  .section-split .fig-wrap { max-width: 250px; }
+  .section-split .fig-wrap svg { max-width: 250px; max-height: 250px; }
+}
+
+/* Hero split */
+.hero-split {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px,6vw,80px);
+  align-items: center;
+  max-width: 1040px;
+  margin: 0 auto;
+  text-align: left;
+}
+.hero-split .hero-sub { margin-left: 0; max-width: 100%; }
+@media (max-width: 820px) {
+  .hero-split { grid-template-columns: 1fr; text-align: center; gap: 28px; }
+  .hero-split .hero-sub { margin: 18px auto 0; }
+  .hero-split .hero-fig { order: -1; }
+}
+
+/* ========================
+   FIGURE WRAPPER
+   ======================== */
+.fig-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.fig-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -24%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 44% 38%,
+    rgba(246,208,166,0.38) 0%,
+    rgba(228,167,158,0.22) 48%,
+    rgba(213,163,178,0.12) 72%,
+    transparent 90%
+  );
+  filter: blur(30px);
+  pointer-events: none;
+}
+.fig-wrap svg { width: 90%; height: 90%; overflow: visible; }
+.fig-wrap svg * { transform-box: fill-box; transform-origin: center center; }
+/* Section figures: capped so the SVG never exceeds ~430px in either axis
+   and never goes full-width. Scoped to .section-split so the hero is untouched. */
+.section-split .fig-wrap { max-width: 430px; }
+.section-split .fig-wrap svg {
+  width: 100%;
+  height: auto;
+  max-width: 430px;
+  max-height: 430px;
+  margin: 0 auto;
+}
+.fig-wrap-hero { max-width: 340px; }
+.fig-wrap-hero::before {
+  filter: blur(40px);
+  background: radial-gradient(
+    circle at 44% 38%,
+    rgba(246,208,166,0.52) 0%,
+    rgba(228,167,158,0.32) 48%,
+    rgba(213,163,178,0.18) 72%,
+    transparent 90%
+  );
+}
+
+/* ========================
+   FIGURE ANIMATIONS
+   ======================== */
+@keyframes fig-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-9px); }
+}
+@keyframes fig-float-sm {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-5px); }
+}
+@keyframes fig-breathe {
+  0%, 100% { opacity: 0.52; transform: scale(0.96); }
+  50%       { opacity: 1;    transform: scale(1.07); }
+}
+@keyframes fig-glow {
+  0%, 100% { opacity: 0.36; }
+  50%       { opacity: 0.82; }
+}
+@keyframes fig-pulse {
+  0%, 100% { transform: scale(1);     opacity: 0.40; }
+  50%       { transform: scale(1.06); opacity: 0.82; }
+}
+@keyframes fig-drift {
+  0%,  100% { transform: translate(0,   0  ); }
+  28%        { transform: translate(5px,-7px); }
+  55%        { transform: translate(-3px,-3px); }
+  78%        { transform: translate(-5px, 4px); }
+}
+@keyframes fig-rise {
+  0%   { transform: translateY(0);     opacity: 0;    }
+  14%  {                               opacity: 0.72; }
+  82%  {                               opacity: 0.28; }
+  100% { transform: translateY(-26px); opacity: 0;    }
+}
+
+.fig-float    { animation: fig-float    13s ease-in-out infinite; }
+.fig-float-sm { animation: fig-float-sm 10s ease-in-out infinite; }
+.fig-breathe  { animation: fig-breathe   9s ease-in-out infinite; }
+.fig-glow     { animation: fig-glow      8s ease-in-out infinite; }
+.fig-pulse    { animation: fig-pulse    11s ease-in-out infinite; }
+.fig-drift    { animation: fig-drift    19s ease-in-out infinite; }
+.fig-rise-1   { animation: fig-rise     15s ease-in-out infinite; }
+.fig-rise-2   { animation: fig-rise     15s ease-in-out infinite -5s; }
+.fig-rise-3   { animation: fig-rise     15s ease-in-out infinite -10s; }
+.fig-d1 { animation-delay: -4.5s; }
+.fig-d2 { animation-delay: -8s; }
+.fig-d3 { animation-delay: -2s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fig-float, .fig-float-sm, .fig-breathe, .fig-glow,
+  .fig-pulse, .fig-drift, .fig-rise-1, .fig-rise-2, .fig-rise-3 {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ========================
    LEGAL PAGES
    ======================== */
 .legal-hero {

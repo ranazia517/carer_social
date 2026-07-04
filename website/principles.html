@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css?v=20260704e">
   <link rel="canonical" href="https://carer.wellnetixltd.com/principles.html">
   <meta property="og:image" content="https://carer.wellnetixltd.com/assets/img/og-card.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -70,45 +70,240 @@
     </div>
   </header>
 
-  <section class="section section-narrow" data-reveal aria-labelledby="promises-h">
-    <h2 id="promises-h" class="sr-only">Our promises</h2>
-    <div class="promises">
+  <h2 class="sr-only">Our promises</h2>
 
-      <div class="promise">
-        <h3>We never score you.</h3>
+  <!-- Promise 1: We never score you — a gauge with no needle, nothing measured -->
+  <section class="section-split" data-reveal aria-labelledby="pr1-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="pr1-h">We never score you.</h2>
         <p>There is no burnout meter, no stress level, no mood number, no "how you're doing" gauge — anywhere. You're a person under strain, not a patient to be measured. CARER holds the weight; it never weighs it.</p>
       </div>
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="ng-c" cx="50%" cy="55%" r="58%"><stop offset="0%" stop-color="#FDEBD4" stop-opacity="0.85"/><stop offset="60%" stop-color="#F4CDA6" stop-opacity="0.42"/><stop offset="100%" stop-color="#F4CDA6" stop-opacity="0"/></radialGradient>
+          </defs>
+          <!-- a clear dial face -->
+          <path d="M 64,196 A 96,96 0 0 1 256,196" stroke="rgba(168,102,60,0.45)" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+          <line x1="64" y1="196" x2="256" y2="196" stroke="rgba(168,102,60,0.3)" stroke-width="1.8" stroke-linecap="round"/>
+          <!-- tick marks around the dial -->
+          <line x1="70" y1="196" x2="86" y2="196" stroke="rgba(168,102,60,0.4)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="96.5" y1="126.5" x2="107.8" y2="137.8" stroke="rgba(168,102,60,0.36)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="160" y1="100" x2="160" y2="116" stroke="rgba(168,102,60,0.36)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="223.5" y1="126.5" x2="212.2" y2="137.8" stroke="rgba(168,102,60,0.36)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="250" y1="196" x2="234" y2="196" stroke="rgba(168,102,60,0.4)" stroke-width="2" stroke-linecap="round"/>
+          <!-- warm glow at the pivot: you, held, not weighed -->
+          <circle cx="160" cy="196" r="42" fill="url(#ng-c)" class="fig-breathe fig-d1"/>
+          <!-- the ghost of an absent needle — conspicuously gone -->
+          <line x1="160" y1="196" x2="160" y2="126" stroke="rgba(168,102,60,0.16)" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="2,9"/>
+          <!-- empty pivot socket — no needle mounted -->
+          <circle cx="160" cy="196" r="15" fill="rgba(253,235,212,0.96)" stroke="#A8663C" stroke-width="2" stroke-opacity="0.55"/>
+          <circle cx="160" cy="196" r="6" fill="none" stroke="rgba(168,102,60,0.4)" stroke-width="1.5"/>
+        </svg>
+      </div>
+    </div>
+  </section>
 
-      <div class="promise">
-        <h3>Your words stay yours.</h3>
+  <!-- Promise 2: Your words stay yours — memory pills (reused) -->
+  <section class="section-split split-reverse" data-reveal aria-labelledby="pr2-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="pr2-h">Your words stay yours.</h2>
         <p>What you say lives on your device, in your own words. We never sell it, never train AI on it, and never turn it into a verdict about you. Your memory is something <em>you</em> said — never something we decided.</p>
       </div>
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="me-glow" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#FDEBD4" stop-opacity="0.95"/><stop offset="100%" stop-color="#F4CDA6" stop-opacity="0"/></radialGradient>
+            <filter id="me-blur" x="-55%" y="-45%" width="210%" height="190%"><feGaussianBlur stdDeviation="8"/></filter>
+          </defs>
+          <path d="M 162,32 Q 148,80 163,128 Q 177,176 160,224 Q 150,256 155,295" stroke="rgba(168,102,60,0.28)" stroke-width="1.5" stroke-linecap="round"/>
+          <rect x="113" y="52" width="68" height="20" rx="10" fill="rgba(244,205,166,0.55)" stroke="rgba(168,102,60,0.20)" stroke-width="1"/>
+          <rect x="108" y="112" width="78" height="22" rx="11" fill="rgba(228,167,158,0.50)" stroke="rgba(168,102,60,0.18)" stroke-width="1"/>
+          <rect x="116" y="172" width="66" height="20" rx="10" fill="rgba(213,163,178,0.45)" stroke="rgba(168,102,60,0.15)" stroke-width="1"/>
+          <g class="fig-float">
+            <ellipse cx="160" cy="248" rx="46" ry="14" fill="url(#me-glow)" filter="url(#me-blur)" class="fig-glow fig-d1"/>
+            <rect x="106" y="232" width="108" height="28" rx="14" fill="rgba(253,235,212,0.93)" stroke="#A8663C" stroke-width="1.5" stroke-opacity="0.58"/>
+            <path d="M 122,243 Q 160,240 198,243" stroke="rgba(255,255,255,0.55)" stroke-width="1" stroke-linecap="round"/>
+          </g>
+          <circle cx="162" cy="130" r="3.5" fill="rgba(168,102,60,0.22)"/>
+          <circle cx="160" cy="224" r="3" fill="rgba(168,102,60,0.18)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
 
-      <div class="promise">
-        <h3>We never watch the person you care for.</h3>
+  <!-- Promise 3: We never watch the person you care for — an eye, gently switched off -->
+  <section class="section-split" data-reveal aria-labelledby="pr3-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="pr3-h">We never watch the person you care for.</h2>
         <p>The person you care for is never profiled, tracked, or monitored in CARER. We don't advise on their condition, medications, or care — we'll always point you to the people who can. Their health has no place in our system at all.</p>
       </div>
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="uw-o" cx="42%" cy="38%" r="64%"><stop offset="0%" stop-color="#FAF2E8"/><stop offset="62%" stop-color="#D5A3B2" stop-opacity="0.62"/><stop offset="100%" stop-color="#D5A3B2" stop-opacity="0.28"/></radialGradient>
+            <radialGradient id="uw-h" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(213,163,178,0.16)"/><stop offset="100%" stop-color="rgba(213,163,178,0)"/></radialGradient>
+          </defs>
+          <circle cx="160" cy="146" r="92" fill="url(#uw-h)"/>
+          <!-- eye outline (almond), centered -->
+          <path d="M 92,132 Q 160,88 228,132 Q 160,176 92,132 Z" stroke="rgba(168,102,60,0.42)" stroke-width="2.2" fill="rgba(253,235,212,0.3)"/>
+          <!-- the eye is CLOSED — a downward-resting lid line, not looking -->
+          <path d="M 108,128 Q 160,160 212,128" stroke="#A8663C" stroke-width="2.6" stroke-opacity="0.62" stroke-linecap="round" fill="none"/>
+          <!-- lashes at rest -->
+          <line x1="120" y1="150" x2="115" y2="161" stroke="rgba(168,102,60,0.42)" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="160" y1="159" x2="160" y2="171" stroke="rgba(168,102,60,0.42)" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="200" y1="150" x2="205" y2="161" stroke="rgba(168,102,60,0.42)" stroke-width="1.8" stroke-linecap="round"/>
+          <!-- a power-off badge: watching switched off -->
+          <path d="M 230,88 A 9,9 0 1 1 242,88" stroke="#A8663C" stroke-width="2" stroke-opacity="0.6" stroke-linecap="round" fill="none"/>
+          <line x1="236" y1="80" x2="236" y2="92" stroke="#A8663C" stroke-width="2" stroke-opacity="0.6" stroke-linecap="round"/>
+          <!-- the person you care for, calm and unwatched -->
+          <circle cx="160" cy="234" r="40" fill="url(#uw-o)"/>
+          <circle cx="160" cy="234" r="40" stroke="#A8663C" stroke-width="1.8" stroke-opacity="0.46" fill="none"/>
+          <circle cx="160" cy="234" r="13" fill="rgba(255,255,255,0.9)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
 
-      <div class="promise">
-        <h3>We won't add to your to-do list.</h3>
+  <!-- Promise 4: We won't add to your to-do list — load lifting off an open hand -->
+  <section class="section-split split-reverse" data-reveal aria-labelledby="pr4-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="pr4-h">We won't add to your to-do list.</h2>
         <p>No rotas, no task lists, no medication trackers, no chores to log. You're already drowning in coordination. CARER's job is to <em>subtract</em> load, never add it.</p>
       </div>
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="lf-w" cx="42%" cy="36%" r="66%"><stop offset="0%" stop-color="#FAF2E8"/><stop offset="60%" stop-color="#F4CDA6" stop-opacity="0.78"/><stop offset="100%" stop-color="#E4A79E" stop-opacity="0.42"/></radialGradient>
+          </defs>
+          <!-- open palm, cupped and offering upward -->
+          <path d="M 78,214 Q 90,256 160,260 Q 230,256 242,214" stroke="#A8663C" stroke-width="2.6" stroke-opacity="0.52" stroke-linecap="round" stroke-linejoin="round" fill="rgba(253,235,212,0.12)"/>
+          <!-- finger hints along the far rim, so it reads as a hand -->
+          <path d="M 96,212 Q 92,192 101,186" stroke="rgba(168,102,60,0.42)" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M 128,206 Q 126,184 135,178" stroke="rgba(168,102,60,0.42)" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M 192,206 Q 194,184 185,178" stroke="rgba(168,102,60,0.42)" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <path d="M 224,212 Q 228,192 219,186" stroke="rgba(168,102,60,0.42)" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <!-- upward relief: the load lifting off, not resting -->
+          <path d="M 132,170 L 132,150" stroke="rgba(168,102,60,0.4)" stroke-width="2" stroke-linecap="round"/>
+          <path d="M 126,158 L 132,150 L 138,158" stroke="rgba(168,102,60,0.4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M 188,170 L 188,150" stroke="rgba(168,102,60,0.34)" stroke-width="2" stroke-linecap="round"/>
+          <path d="M 182,158 L 188,150 L 194,158" stroke="rgba(168,102,60,0.34)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <!-- the load, clearly risen away above the hand -->
+          <g class="fig-float">
+            <circle cx="160" cy="108" r="40" fill="url(#lf-w)"/>
+            <circle cx="160" cy="108" r="40" stroke="rgba(213,163,178,0.44)" stroke-width="1.6" fill="none"/>
+            <line x1="142" y1="108" x2="178" y2="108" stroke="rgba(255,255,255,0.94)" stroke-width="3.6" stroke-linecap="round"/>
+          </g>
+          <circle cx="150" cy="60" r="2.4" fill="#F4CDA6" class="fig-rise-1"/>
+          <circle cx="172" cy="52" r="2" fill="#E4A79E" class="fig-rise-2"/>
+        </svg>
+      </div>
+    </div>
+  </section>
 
-      <div class="promise">
-        <h3>No streaks, no guilt, no 3am pull.</h3>
+  <!-- Promise 5: No streaks, no guilt, no 3am pull — a calm crescent, rest -->
+  <section class="section-split" data-reveal aria-labelledby="pr5-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="pr5-h">No streaks, no guilt, no 3am pull.</h2>
         <p>There's nothing to keep up, nothing to break, and nothing to miss. Success isn't how long you stay — it's whether you felt held enough to put the phone down. Late at night, CARER helps you rest, never keeps you scrolling.</p>
       </div>
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="mn-glow" cx="50%" cy="45%" r="58%"><stop offset="0%" stop-color="#FDEBD4" stop-opacity="0.8"/><stop offset="55%" stop-color="#F4CDA6" stop-opacity="0.34"/><stop offset="100%" stop-color="#F4CDA6" stop-opacity="0"/></radialGradient>
+            <radialGradient id="mn-body" cx="42%" cy="38%" r="66%"><stop offset="0%" stop-color="#FFFBF2"/><stop offset="70%" stop-color="#FDEBD4" stop-opacity="0.9"/><stop offset="100%" stop-color="#F4CDA6" stop-opacity="0.55"/></radialGradient>
+          </defs>
+          <!-- soft night glow -->
+          <circle cx="160" cy="158" r="84" fill="url(#mn-glow)" class="fig-breathe fig-d1"/>
+          <!-- calm crescent moon -->
+          <path d="M 192,84 A 78,78 0 1 0 192,236 A 60,60 0 1 1 192,84 Z" fill="url(#mn-body)" stroke="#A8663C" stroke-width="1.7" stroke-opacity="0.42"/>
+          <!-- a couple of quiet stars, settling -->
+          <circle cx="214" cy="120" r="2.6" fill="#F4CDA6" class="fig-float-sm fig-d1"/>
+          <circle cx="226" cy="176" r="2" fill="#E4A79E" class="fig-float-sm fig-d3"/>
+          <circle cx="120" cy="214" r="2.2" fill="#D5A3B2" class="fig-float-sm fig-d2"/>
+        </svg>
+      </div>
+    </div>
+  </section>
 
-      <div class="promise">
-        <h3>Help is one tap away — even offline.</h3>
+  <!-- Promise 6: Help is one tap away, even offline — four-direction shield (reused, calm) -->
+  <section class="section-split split-reverse" data-reveal aria-labelledby="pr6-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="pr6-h">Help is one tap away — even offline.</h2>
         <p>The crisis and safeguarding route is free forever, works with no signal, and is reachable before you've even signed in. Safety is never behind a paywall or a login.</p>
       </div>
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="cr-centre" cx="50%" cy="45%" r="55%"><stop offset="0%" stop-color="#FDEBD4"/><stop offset="60%" stop-color="#F4CDA6" stop-opacity="0.65"/><stop offset="100%" stop-color="#E4A79E" stop-opacity="0"/></radialGradient>
+            <radialGradient id="cr-fill" cx="50%" cy="38%" r="65%"><stop offset="0%" stop-color="rgba(253,235,212,0.58)"/><stop offset="100%" stop-color="rgba(244,205,166,0.12)"/></radialGradient>
+            <filter id="cr-blur" x="-38%" y="-38%" width="176%" height="176%"><feGaussianBlur stdDeviation="7"/></filter>
+          </defs>
+          <g class="fig-pulse"><circle cx="160" cy="162" r="120" stroke="rgba(213,163,178,0.38)" stroke-width="1.5" fill="none"/></g>
+          <circle cx="160" cy="162" r="102" stroke="rgba(228,167,158,0.20)" stroke-width="1" fill="none"/>
+          <line x1="160" y1="58" x2="160" y2="97" stroke="#F4CDA6" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="160" cy="55" r="4" fill="#E4A79E" opacity="0.68"/>
+          <line x1="160" y1="227" x2="160" y2="266" stroke="#F4CDA6" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="160" cy="268" r="4" fill="#E4A79E" opacity="0.68"/>
+          <line x1="225" y1="162" x2="264" y2="162" stroke="#F4CDA6" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="266" cy="162" r="4" fill="#E4A79E" opacity="0.68"/>
+          <line x1="95" y1="162" x2="56" y2="162" stroke="#F4CDA6" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="54" cy="162" r="4" fill="#E4A79E" opacity="0.68"/>
+          <path d="M 160,72 L 218,98 L 234,158 Q 232,220 160,258 Q 88,220 86,158 L 102,98 Z" fill="url(#cr-fill)" stroke="#A8663C" stroke-width="2" stroke-opacity="0.52" stroke-linejoin="round"/>
+          <circle cx="160" cy="163" r="44" fill="url(#cr-centre)" filter="url(#cr-blur)" class="fig-breathe"/>
+          <circle cx="160" cy="163" r="17" fill="rgba(253,235,212,0.96)"/>
+          <circle cx="160" cy="163" r="8" fill="rgba(255,255,255,0.93)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
 
-      <div class="promise">
-        <h3>Non-clinical by design.</h3>
+  <!-- Promise 7: Non-clinical by design — signposting outward to real help (reused) -->
+  <section class="section-split" data-reveal aria-labelledby="pr7-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="pr7-h">Non-clinical by design.</h2>
         <p>CARER does not diagnose, treat, assess, or monitor anyone. It's a wellbeing companion — it supports, reflects, remembers, holds, and signposts. When something is clinical, it tells you honestly and points you to the right people.</p>
       </div>
-
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="sp-centre" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#FDEBD4"/><stop offset="75%" stop-color="#F4CDA6" stop-opacity="0.55"/><stop offset="100%" stop-color="#F4CDA6" stop-opacity="0"/></radialGradient>
+            <filter id="sp-blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+          </defs>
+          <circle cx="160" cy="172" r="36" fill="#F4CDA6" filter="url(#sp-blur)" class="fig-breathe"/>
+          <path d="M 154,164 Q 126,138 87,108" stroke="rgba(168,102,60,0.34)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <path d="M 166,163 Q 197,133 235,106" stroke="rgba(168,102,60,0.30)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <path d="M 150,170 Q 113,170 75,170" stroke="rgba(168,102,60,0.28)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <path d="M 168,180 Q 200,204 237,222" stroke="rgba(168,102,60,0.25)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <circle cx="85" cy="107" r="11" fill="rgba(244,205,166,0.76)" stroke="rgba(168,102,60,0.22)" stroke-width="1.2" class="fig-float-sm fig-d1"/>
+          <circle cx="236" cy="105" r="10" fill="rgba(228,167,158,0.72)" stroke="rgba(168,102,60,0.20)" stroke-width="1.2" class="fig-float-sm fig-d2"/>
+          <circle cx="73" cy="170" r="9" fill="rgba(213,163,178,0.66)" stroke="rgba(168,102,60,0.18)" stroke-width="1.2" class="fig-float fig-d3"/>
+          <circle cx="238" cy="223" r="10" fill="rgba(244,205,166,0.72)" stroke="rgba(168,102,60,0.20)" stroke-width="1.2" class="fig-float-sm"/>
+          <circle cx="160" cy="172" r="19" fill="url(#sp-centre)" stroke="#A8663C" stroke-width="1.8" stroke-opacity="0.52"/>
+          <circle cx="160" cy="172" r="7" fill="rgba(255,255,255,0.92)"/>
+        </svg>
+      </div>
     </div>
   </section>
 
@@ -203,6 +398,6 @@
   </div>
 </footer>
 
-<script src="assets/main.js"></script>
+<script src="assets/main.js?v=20260704e"></script>
 </body>
 </html>

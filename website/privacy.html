@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css?v=20260704e">
   <link rel="canonical" href="https://carer.wellnetixltd.com/privacy.html">
   <meta property="og:image" content="https://carer.wellnetixltd.com/assets/img/og-card.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -97,35 +97,148 @@
       </ul>
     </div>
 
-    <div class="detail-block">
-      <h2>What we never collect or do</h2>
-      <ul>
-        <li>We never build a profile, health record, or "trend" of the <strong>person you care for</strong>. They are never a data subject in CARER.</li>
-        <li>We never compute or store a burnout, stress, mood, or risk <strong>score</strong> about you.</li>
-        <li>We never sell your data, share it with your family, or train AI models on your disclosures.</li>
-        <li>We never ask for intrusive permissions at install (microphone, contacts) — and audio is treated as the least-trusted data type.</li>
-      </ul>
-    </div>
+  </div>
 
-    <div class="detail-block">
-      <h2>On-device AI</h2>
-      <p>CARER's companion downloads to your phone once, over Wi-Fi, the first time you use it. After that it runs <strong>on your device</strong>, offline. Your words can stay entirely on your phone.</p>
+  <!-- What we never collect or do — data-hearts safe behind a soft shield (never sold) -->
+  <section class="section-split" data-reveal aria-labelledby="pv-nevercollect-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="pv-nevercollect-h">What we never collect or do</h2>
+        <ul>
+          <li>We never build a profile, health record, or "trend" of the <strong>person you care for</strong>. They are never a data subject in CARER.</li>
+          <li>We never compute or store a burnout, stress, mood, or risk <strong>score</strong> about you.</li>
+          <li>We never sell your data, share it with your family, or train AI models on your disclosures.</li>
+          <li>We never ask for intrusive permissions at install (microphone, contacts) — and audio is treated as the least-trusted data type.</li>
+        </ul>
+      </div>
     </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="ns-dome" cx="50%" cy="50%" r="55%"><stop offset="0%" stop-color="#FDEBD4" stop-opacity="0.6"/><stop offset="100%" stop-color="#F4CDA6" stop-opacity="0"/></radialGradient>
+          </defs>
+          <!-- soft glow held inside -->
+          <circle cx="160" cy="158" r="58" fill="url(#ns-dome)" class="fig-glow fig-d1"/>
+          <!-- gentle protective dome over your words -->
+          <path d="M 82,198 Q 82,102 160,88 Q 238,102 238,198" stroke="#A8663C" stroke-width="2.3" stroke-opacity="0.5" stroke-linecap="round" fill="rgba(253,235,212,0.12)"/>
+          <path d="M 82,198 Q 160,214 238,198" stroke="rgba(168,102,60,0.4)" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+          <!-- data-hearts kept safe, never sold -->
+          <path d="M 160,168 C 138,152 138,130 160,142 C 182,130 182,152 160,168 Z" fill="rgba(244,205,166,0.8)" stroke="rgba(168,102,60,0.3)" stroke-width="1.2" class="fig-float-sm fig-d1"/>
+          <path d="M 124,182 C 110,172 110,158 124,166 C 138,158 138,172 124,182 Z" fill="rgba(228,167,158,0.72)" stroke="rgba(168,102,60,0.26)" stroke-width="1.1" class="fig-float-sm fig-d3"/>
+          <path d="M 196,182 C 182,172 182,158 196,166 C 210,158 210,172 196,182 Z" fill="rgba(213,163,178,0.7)" stroke="rgba(168,102,60,0.24)" stroke-width="1.1" class="fig-float-sm fig-d2"/>
+        </svg>
+      </div>
+    </div>
+  </section>
 
-    <div class="detail-block">
-      <h2>End-to-end encryption</h2>
-      <p>Your memory is stored with field-level encryption on your device. If you turn on cloud backup, it's uploaded as ciphertext only — end-to-end encrypted with a key only you hold, recoverable via a recovery code. Our servers store an unreadable copy; we cannot decrypt it.</p>
+  <!-- On-device AI — the contained phone (reused) -->
+  <section class="section-split split-reverse" data-reveal aria-labelledby="pv-ondevice-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="pv-ondevice-h">On-device AI</h2>
+        <p>CARER's companion downloads to your phone once, over Wi-Fi, the first time you use it. After that it runs <strong>on your device</strong>, offline. Your words can stay entirely on your phone.</p>
+      </div>
     </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="dv-phone" cx="50%" cy="28%" r="70%"><stop offset="0%" stop-color="rgba(253,235,212,0.62)"/><stop offset="100%" stop-color="rgba(244,205,166,0.18)"/></radialGradient>
+            <radialGradient id="dv-lock" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#F4CDA6" stop-opacity="0.92"/><stop offset="100%" stop-color="#F4CDA6" stop-opacity="0"/></radialGradient>
+            <filter id="dv-blur" x="-55%" y="-55%" width="210%" height="210%"><feGaussianBlur stdDeviation="7"/></filter>
+          </defs>
+          <g opacity="0.19"><circle cx="138" cy="66" r="16" fill="#D5A3B2"/><circle cx="160" cy="59" r="20" fill="#D5A3B2"/><circle cx="182" cy="66" r="15" fill="#D5A3B2"/><rect x="122" y="66" width="80" height="18" fill="#D5A3B2"/></g>
+          <ellipse cx="160" cy="65" rx="46" ry="18" stroke="rgba(168,102,60,0.14)" stroke-width="1.2" stroke-dasharray="4,4" fill="none"/>
+          <rect x="112" y="82" width="96" height="170" rx="18" fill="url(#dv-phone)" stroke="#A8663C" stroke-width="2.2" stroke-opacity="0.62"/>
+          <rect x="142" y="88" width="36" height="5" rx="2.5" fill="rgba(168,102,60,0.18)"/>
+          <rect x="118" y="100" width="84" height="136" rx="10" fill="rgba(255,255,255,0.22)"/>
+          <circle cx="150" cy="138" r="7.5" fill="#F4CDA6" class="fig-float fig-d1"/>
+          <circle cx="177" cy="152" r="5.5" fill="#E4A79E" class="fig-float-sm fig-d2"/>
+          <circle cx="152" cy="172" r="9" fill="rgba(213,163,178,0.82)" class="fig-float fig-d2"/>
+          <circle cx="175" cy="122" r="4" fill="#F4CDA6" class="fig-float-sm"/>
+          <circle cx="138" cy="160" r="5" fill="rgba(228,167,158,0.72)" class="fig-float fig-d3"/>
+          <circle cx="160" cy="280" r="26" fill="url(#dv-lock)" filter="url(#dv-blur)" class="fig-glow"/>
+          <rect x="146" y="272" width="28" height="21" rx="6" fill="rgba(253,235,212,0.95)" stroke="#A8663C" stroke-width="1.8" stroke-opacity="0.58"/>
+          <path d="M 151,272 L 151,264 Q 151,257 160,257 Q 169,257 169,264 L 169,272" stroke="#A8663C" stroke-width="1.8" stroke-linecap="round" stroke-opacity="0.52" fill="none"/>
+          <circle cx="160" cy="282" r="2.5" fill="rgba(168,102,60,0.40)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- End-to-end encryption — a sealed vault, warm and contained -->
+  <section class="section-split" data-reveal aria-labelledby="pv-e2e-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="pv-e2e-h">End-to-end encryption</h2>
+        <p>Your memory is stored with field-level encryption on your device. If you turn on cloud backup, it's uploaded as ciphertext only — end-to-end encrypted with a key only you hold, recoverable via a recovery code. Our servers store an unreadable copy; we cannot decrypt it.</p>
+      </div>
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="vt-in" cx="50%" cy="46%" r="55%"><stop offset="0%" stop-color="#FDEBD4"/><stop offset="60%" stop-color="#F4CDA6" stop-opacity="0.6"/><stop offset="100%" stop-color="#F4CDA6" stop-opacity="0"/></radialGradient>
+            <radialGradient id="vt-fill" cx="50%" cy="34%" r="70%"><stop offset="0%" stop-color="rgba(253,235,212,0.5)"/><stop offset="100%" stop-color="rgba(244,205,166,0.14)"/></radialGradient>
+          </defs>
+          <!-- protective pulse ring -->
+          <rect x="74" y="88" width="172" height="160" rx="28" stroke="rgba(213,163,178,0.32)" stroke-width="1.3" fill="none" class="fig-pulse"/>
+          <!-- vault body -->
+          <rect x="92" y="104" width="136" height="128" rx="20" fill="url(#vt-fill)" stroke="#A8663C" stroke-width="2.2" stroke-opacity="0.6"/>
+          <line x1="92" y1="140" x2="228" y2="140" stroke="rgba(168,102,60,0.3)" stroke-width="1.2"/>
+          <!-- warm light sealed inside -->
+          <circle cx="160" cy="182" r="30" fill="url(#vt-in)" class="fig-breathe fig-d1"/>
+          <!-- seal / keyhole — a key only you hold -->
+          <circle cx="160" cy="176" r="16" fill="rgba(253,235,212,0.95)" stroke="#A8663C" stroke-width="1.6" stroke-opacity="0.55"/>
+          <circle cx="160" cy="172" r="4.5" fill="rgba(168,102,60,0.5)"/>
+          <rect x="157" y="174" width="6" height="12" rx="3" fill="rgba(168,102,60,0.45)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="section section-narrow" data-reveal>
 
     <div class="detail-block">
       <h2>Cloud assistance is off by default</h2>
       <p>Some optional features can use a cloud service for a richer response. This is <strong>off</strong> unless you switch it on, and clearly labelled when you do. You can leave CARER fully on-device.</p>
     </div>
 
-    <div class="detail-block">
-      <h2>Export and delete</h2>
-      <p>You can view and edit everything CARER remembers, export it, or delete all of it — at any time, without losing access to the companion itself.</p>
+  </div>
+
+  <!-- Export and delete — data you can pick up and take (you're in control) -->
+  <section class="section-split split-reverse" data-reveal aria-labelledby="pv-export-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="pv-export-h">Export and delete</h2>
+        <p>You can view and edit everything CARER remembers, export it, or delete all of it — at any time, without losing access to the companion itself.</p>
+      </div>
     </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="ic-d" cx="50%" cy="50%" r="52%"><stop offset="0%" stop-color="#FDEBD4" stop-opacity="0.6"/><stop offset="100%" stop-color="#F4CDA6" stop-opacity="0"/></radialGradient>
+          </defs>
+          <circle cx="160" cy="172" r="42" fill="url(#ic-d)" class="fig-glow fig-d1"/>
+          <!-- open palm, offering -->
+          <path d="M 90,202 Q 104,244 160,248 Q 216,244 230,202" stroke="#A8663C" stroke-width="2.4" stroke-opacity="0.5" stroke-linecap="round" stroke-linejoin="round" fill="rgba(253,235,212,0.1)"/>
+          <path d="M 118,210 Q 130,232 160,234 Q 190,232 202,210" stroke="rgba(228,167,158,0.4)" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+          <!-- your data, held: rounded cards -->
+          <rect x="128" y="168" width="64" height="17" rx="8.5" fill="rgba(228,167,158,0.6)" stroke="rgba(168,102,60,0.24)" stroke-width="1"/>
+          <rect x="122" y="146" width="76" height="17" rx="8.5" fill="rgba(244,205,166,0.66)" stroke="rgba(168,102,60,0.24)" stroke-width="1"/>
+          <!-- one lifting free — portable, exportable -->
+          <g class="fig-float"><rect x="136" y="116" width="48" height="17" rx="8.5" fill="rgba(253,235,212,0.94)" stroke="#A8663C" stroke-width="1.4" stroke-opacity="0.55"/></g>
+          <!-- gentle export arrow, up and out -->
+          <path d="M 160,104 L 160,80" stroke="rgba(168,102,60,0.55)" stroke-width="2" stroke-linecap="round"/>
+          <path d="M 151,89 L 160,80 L 169,89" stroke="rgba(168,102,60,0.55)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="section section-narrow" data-reveal>
 
     <div class="detail-block">
       <h2>No surveillance of the person you care for</h2>
@@ -222,6 +335,6 @@ Read our full legal pages: <a href="privacy-notice.html" style="color:var(--bran
   </div>
 </footer>
 
-<script src="assets/main.js"></script>
+<script src="assets/main.js?v=20260704e"></script>
 </body>
 </html>

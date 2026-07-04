@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css?v=20260704e">
   <link rel="canonical" href="https://carer.wellnetixltd.com/who-its-for.html">
   <meta property="og:image" content="https://carer.wellnetixltd.com/assets/img/og-card.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -70,47 +70,199 @@
     </div>
   </header>
 
-  <section class="section" data-reveal aria-labelledby="personas-h">
-    <h2 id="personas-h" class="sr-only">Carer personas</h2>
-    <div class="persona-grid">
+  <h2 class="sr-only">Carer personas</h2>
 
-      <article class="persona-card">
-        <h3>The sandwich carer</h3>
+  <!-- Persona 1: Sandwich carer — a central presence pulled toward two -->
+  <section class="section-split" data-reveal aria-labelledby="p1-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="p1-h">The sandwich carer</h2>
         <p>Caring for an ageing parent while raising children and holding down a job — pulled apart, time-poor, and only able to feel any of it once everyone else is finally asleep. CARER is built for minutes, not sessions, and picks up exactly where you left off.</p>
-      </article>
+      </div>
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="p1-c" cx="42%" cy="36%" r="66%"><stop offset="0%" stop-color="#FAF2E8"/><stop offset="58%" stop-color="#F4CDA6" stop-opacity="0.85"/><stop offset="100%" stop-color="#E4A79E" stop-opacity="0.46"/></radialGradient>
+            <radialGradient id="p1-a" cx="40%" cy="34%" r="68%"><stop offset="0%" stop-color="#FAF2E8"/><stop offset="64%" stop-color="#D5A3B2" stop-opacity="0.78"/><stop offset="100%" stop-color="#D5A3B2" stop-opacity="0.42"/></radialGradient>
+            <radialGradient id="p1-b" cx="40%" cy="34%" r="68%"><stop offset="0%" stop-color="#FAF2E8"/><stop offset="64%" stop-color="#F4CDA6" stop-opacity="0.78"/><stop offset="100%" stop-color="#E4A79E" stop-opacity="0.44"/></radialGradient>
+            <radialGradient id="p1-halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(244,205,166,0.28)"/><stop offset="100%" stop-color="rgba(244,205,166,0)"/></radialGradient>
+          </defs>
+          <circle cx="160" cy="160" r="70" fill="url(#p1-halo)"/>
+          <!-- taut threads pulling the centre toward two others -->
+          <path d="M146,146 Q118,116 96,92" stroke="rgba(168,102,60,0.42)" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M176,176 Q206,206 228,230" stroke="rgba(168,102,60,0.4)" stroke-width="2.6" stroke-linecap="round"/>
+          <!-- upper other (parent) -->
+          <g class="fig-float-sm fig-d1"><circle cx="88" cy="84" r="40" fill="url(#p1-a)"/><circle cx="88" cy="84" r="40" stroke="rgba(213,163,178,0.42)" stroke-width="1.6" fill="none"/></g>
+          <!-- lower other (child) -->
+          <g class="fig-float-sm fig-d3"><circle cx="234" cy="238" r="34" fill="url(#p1-b)"/><circle cx="234" cy="238" r="34" stroke="rgba(228,167,158,0.4)" stroke-width="1.6" fill="none"/></g>
+          <!-- centre carer, held between -->
+          <circle cx="160" cy="160" r="58" fill="url(#p1-c)"/>
+          <circle cx="160" cy="160" r="58" stroke="#A8663C" stroke-width="2" stroke-opacity="0.52" fill="none"/>
+          <circle cx="160" cy="160" r="19" fill="rgba(255,255,255,0.92)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
 
-      <article class="persona-card">
-        <h3>The spousal carer</h3>
+  <!-- Persona 2: Spousal carer — one presence sheltering another -->
+  <section class="section-split split-reverse" data-reveal aria-labelledby="p2-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="p2-h">The spousal carer</h2>
         <p>Walking the treatment rollercoaster beside a partner — being "the strong one," with your own fear tucked away where they can't see it. CARER is somewhere to put that fear down without being told it'll all be fine.</p>
-      </article>
+      </div>
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="p2-s" cx="46%" cy="42%" r="60%"><stop offset="0%" stop-color="#FDEBD4" stop-opacity="0.85"/><stop offset="60%" stop-color="#F4CDA6" stop-opacity="0.4"/><stop offset="100%" stop-color="#E4A79E" stop-opacity="0"/></radialGradient>
+            <radialGradient id="p2-o" cx="40%" cy="34%" r="68%"><stop offset="0%" stop-color="#FAF2E8"/><stop offset="62%" stop-color="#F4CDA6" stop-opacity="0.82"/><stop offset="100%" stop-color="#E4A79E" stop-opacity="0.46"/></radialGradient>
+          </defs>
+          <!-- sheltering presence: a larger arc curving protectively over the other -->
+          <path d="M 60,168 A 100,100 0 0 1 260,168" stroke="#A8663C" stroke-width="3.2" stroke-opacity="0.55" stroke-linecap="round" fill="none"/>
+          <path d="M 78,172 A 82,82 0 0 1 242,172" stroke="rgba(213,163,178,0.55)" stroke-width="2" stroke-linecap="round" fill="none"/>
+          <!-- soft warmth held under the shelter -->
+          <circle cx="160" cy="176" r="66" fill="url(#p2-s)" class="fig-breathe fig-d1"/>
+          <!-- the smaller one, tucked in and safe -->
+          <g class="fig-float-sm"><circle cx="160" cy="180" r="48" fill="url(#p2-o)"/><circle cx="160" cy="180" r="48" stroke="rgba(168,102,60,0.46)" stroke-width="1.8" fill="none"/></g>
+          <circle cx="160" cy="180" r="17" fill="rgba(255,255,255,0.92)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
 
-      <article class="persona-card">
-        <h3>The parent of a disabled or autistic child</h3>
+  <!-- Persona 3: Parent of disabled/autistic child — larger presence tenderly holding a small one on a diverging path -->
+  <section class="section-split" data-reveal aria-labelledby="p3-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="p3-h">The parent of a disabled or autistic child</h2>
         <p>Loving your child completely, fighting the systems that are meant to help, and quietly carrying a grief that has no finish line. CARER holds that "both/and" — love and sorrow together — and never pushes you toward "closure."</p>
-      </article>
+      </div>
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="p3-l" cx="40%" cy="34%" r="68%"><stop offset="0%" stop-color="#FAF2E8"/><stop offset="60%" stop-color="#F4CDA6" stop-opacity="0.82"/><stop offset="100%" stop-color="#E4A79E" stop-opacity="0.44"/></radialGradient>
+            <radialGradient id="p3-s" cx="40%" cy="34%" r="68%"><stop offset="0%" stop-color="#FAF2E8"/><stop offset="62%" stop-color="#D5A3B2" stop-opacity="0.82"/><stop offset="100%" stop-color="#D5A3B2" stop-opacity="0.46"/></radialGradient>
+            <radialGradient id="p3-halo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(244,205,166,0.24)"/><stop offset="100%" stop-color="rgba(244,205,166,0)"/></radialGradient>
+          </defs>
+          <circle cx="150" cy="168" r="72" fill="url(#p3-halo)"/>
+          <!-- a shared path that gently diverges, no finish line (fades to dots) -->
+          <path d="M 118,196 Q 156,182 182,150" stroke="rgba(168,102,60,0.36)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+          <path d="M 182,150 Q 214,116 250,104" stroke="rgba(168,102,60,0.3)" stroke-width="2" stroke-linecap="round" stroke-dasharray="2,9" fill="none"/>
+          <path d="M 182,150 Q 224,156 264,150" stroke="rgba(168,102,60,0.22)" stroke-width="2" stroke-linecap="round" stroke-dasharray="2,9" fill="none"/>
+          <!-- larger presence, tenderly holding -->
+          <circle cx="118" cy="170" r="62" fill="url(#p3-l)"/>
+          <circle cx="118" cy="170" r="62" stroke="#A8663C" stroke-width="2" stroke-opacity="0.5" fill="none"/>
+          <circle cx="118" cy="170" r="20" fill="rgba(255,255,255,0.92)"/>
+          <!-- small one, held close on the diverging path -->
+          <g class="fig-float-sm fig-d2"><circle cx="182" cy="150" r="30" fill="url(#p3-s)"/><circle cx="182" cy="150" r="30" stroke="rgba(213,163,178,0.44)" stroke-width="1.6" fill="none"/></g>
+          <circle cx="182" cy="150" r="9" fill="rgba(255,255,255,0.9)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
 
-      <article class="persona-card">
-        <h3>The carer of an adult child with serious mental illness</h3>
+  <!-- Persona 4: Carer of adult child with SMI — a presence and a distant pulse -->
+  <section class="section-split split-reverse" data-reveal aria-labelledby="p4-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="p4-h">The carer of an adult child with serious mental illness</h2>
         <p>Living with vigilance, stigma, and the fear of the next phone call — carrying love, fear, and anger all braided together. CARER gives that churn a safe, non-judging outlet, and never turns your feelings into something to manage for someone else's sake.</p>
-      </article>
+      </div>
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="p4-o" cx="40%" cy="34%" r="68%"><stop offset="0%" stop-color="#FAF2E8"/><stop offset="60%" stop-color="#F4CDA6" stop-opacity="0.82"/><stop offset="100%" stop-color="#E4A79E" stop-opacity="0.46"/></radialGradient>
+            <radialGradient id="p4-d" cx="50%" cy="48%" r="52%"><stop offset="0%" stop-color="#FDEBD4"/><stop offset="45%" stop-color="#E4A79E" stop-opacity="0.85"/><stop offset="100%" stop-color="#E4A79E" stop-opacity="0"/></radialGradient>
+          </defs>
+          <!-- taut thread of connection held across distance -->
+          <path d="M 106,214 Q 168,150 218,102" stroke="rgba(168,102,60,0.4)" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+          <!-- the carer, holding steady -->
+          <circle cx="98" cy="220" r="58" fill="url(#p4-o)"/>
+          <circle cx="98" cy="220" r="58" stroke="#A8663C" stroke-width="2" stroke-opacity="0.5" fill="none"/>
+          <circle cx="98" cy="220" r="18" fill="rgba(255,255,255,0.92)"/>
+          <!-- distant pulse — the awaited call, watched with vigilance -->
+          <circle cx="224" cy="98" r="52" fill="url(#p4-d)" class="fig-pulse"/>
+          <circle cx="224" cy="98" r="40" stroke="rgba(228,167,158,0.5)" stroke-width="1.6" fill="none" class="fig-pulse fig-d2"/>
+          <circle cx="224" cy="98" r="26" stroke="rgba(228,167,158,0.4)" stroke-width="1.4" fill="none"/>
+          <circle cx="224" cy="98" r="14" fill="rgba(228,167,158,0.9)"/>
+          <circle cx="224" cy="98" r="6" fill="rgba(255,255,255,0.9)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
 
-      <article class="persona-card">
-        <h3>The young adult carer (18+)</h3>
+  <!-- Persona 5: Young adult carer — a small young presence carrying -->
+  <section class="section-split" data-reveal aria-labelledby="p5-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="p5-h">The young adult carer (18+)</h2>
         <p>Helping look after someone at home while trying to be a young person too — often unseen, often without even the word for what you are. CARER offers recognition, a place for the resentment-and-love, and support that holds both parts of who you are.</p>
         <p style="margin-top:10px; font-size:13px; color:var(--text-muted);">CARER is for adults 18 and over. If you're under 18 and caring for someone, you deserve just as much support — see the signpost below.</p>
-      </article>
-
-      <article class="persona-card">
-        <h3>The former carer, in the after</h3>
-        <p>When the caring ends, most support falls away — but you don't stop needing to be held. CARER doesn't disappear at that moment. It stays, holds the guilt of relief and the loss of the role, and remembers the whole story as something that mattered.</p>
-      </article>
-
+      </div>
     </div>
-
-    <p style="text-align:center; margin-top:44px; font-size:18px; font-style:italic; color:var(--text-muted);">
-      You don't have to fit one of these exactly. If you're an adult carer — 18 or over — CARER is for you.
-    </p>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="p5-big" cx="46%" cy="40%" r="62%"><stop offset="0%" stop-color="#FDEBD4" stop-opacity="0.82"/><stop offset="58%" stop-color="#D5A3B2" stop-opacity="0.6"/><stop offset="100%" stop-color="#D5A3B2" stop-opacity="0.28"/></radialGradient>
+            <radialGradient id="p5-y" cx="40%" cy="34%" r="68%"><stop offset="0%" stop-color="#FAF2E8"/><stop offset="58%" stop-color="#F4CDA6" stop-opacity="0.85"/><stop offset="100%" stop-color="#E4A79E" stop-opacity="0.5"/></radialGradient>
+          </defs>
+          <!-- the larger weight, resting on a small one -->
+          <circle cx="160" cy="118" r="76" fill="url(#p5-big)" class="fig-breathe"/>
+          <circle cx="160" cy="118" r="76" stroke="rgba(168,102,60,0.28)" stroke-width="1.6" fill="none"/>
+          <!-- the carrying — shoulders taking the weight -->
+          <path d="M 122,214 Q 160,182 198,214" stroke="rgba(168,102,60,0.42)" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+          <!-- small young presence, steady beneath, holding it all up -->
+          <circle cx="160" cy="236" r="40" fill="url(#p5-y)"/>
+          <circle cx="160" cy="236" r="40" stroke="#A8663C" stroke-width="2" stroke-opacity="0.52" fill="none"/>
+          <circle cx="160" cy="236" r="13" fill="rgba(255,255,255,0.92)"/>
+        </svg>
+      </div>
+    </div>
   </section>
+
+  <!-- Persona 6: Former carer, in the after — a single presence beside a soft empty space holding a light -->
+  <section class="section-split split-reverse" data-reveal aria-labelledby="p6-h">
+    <div class="split-text">
+      <div class="detail-block">
+        <h2 id="p6-h">The former carer, in the after</h2>
+        <p>When the caring ends, most support falls away — but you don't stop needing to be held. CARER doesn't disappear at that moment. It stays, holds the guilt of relief and the loss of the role, and remembers the whole story as something that mattered.</p>
+      </div>
+    </div>
+    <div class="split-fig" aria-hidden="true">
+      <div class="fig-wrap">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="p6-o" cx="40%" cy="34%" r="68%"><stop offset="0%" stop-color="#FAF2E8"/><stop offset="60%" stop-color="#F4CDA6" stop-opacity="0.82"/><stop offset="100%" stop-color="#E4A79E" stop-opacity="0.46"/></radialGradient>
+            <radialGradient id="p6-fl" cx="50%" cy="42%" r="60%"><stop offset="0%" stop-color="#FFFBF2"/><stop offset="42%" stop-color="#FDEBD4" stop-opacity="0.95"/><stop offset="100%" stop-color="#F4CDA6" stop-opacity="0"/></radialGradient>
+          </defs>
+          <!-- the carer, still here -->
+          <circle cx="102" cy="168" r="56" fill="url(#p6-o)"/>
+          <circle cx="102" cy="168" r="56" stroke="#A8663C" stroke-width="2" stroke-opacity="0.5" fill="none"/>
+          <circle cx="102" cy="168" r="18" fill="rgba(255,255,255,0.92)"/>
+          <!-- the soft empty space where someone was -->
+          <circle cx="222" cy="168" r="58" stroke="rgba(168,102,60,0.3)" stroke-width="1.8" stroke-dasharray="2,9" fill="none"/>
+          <!-- a little light, kept, at its centre — a clear warm flame-point -->
+          <circle cx="222" cy="168" r="40" fill="url(#p6-fl)" class="fig-glow fig-d1"/>
+          <path d="M 222,138 Q 236,160 229,176 Q 222,188 215,176 Q 208,160 222,138 Z" fill="#FFF6E6"/>
+          <circle cx="222" cy="170" r="12" fill="rgba(253,235,212,0.98)"/>
+          <circle cx="222" cy="170" r="5" fill="rgba(255,255,255,0.98)"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <p style="text-align:center; margin:8px auto 0; max-width:680px; padding:0 24px; font-size:18px; font-style:italic; color:var(--text-muted);">
+    You don't have to fit one of these exactly. If you're an adult carer — 18 or over — CARER is for you.
+  </p>
 
   <!-- Under-18 signpost — warm, separate, clearly out-pointing -->
   <div class="section-narrow" data-reveal>
@@ -217,6 +369,6 @@
   </div>
 </footer>
 
-<script src="assets/main.js"></script>
+<script src="assets/main.js?v=20260704e"></script>
 </body>
 </html>
