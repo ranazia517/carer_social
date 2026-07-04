@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wellnetix Ltd — Advancing Human Wellbeing Through Intelligent Technologies</title>
+<meta name="description" content="Wellnetix Ltd is a UK digital-health and AI innovation company building scalable, ethical, privacy-first systems for mental wellbeing — the parent company behind NiMind and CARER." />
+<link rel="canonical" href="https://wellnetixltd.com/" />
+<meta name="theme-color" content="#0B0B14" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Wellnetix Ltd" />
+<meta property="og:title" content="Wellnetix Ltd — Advancing Human Wellbeing Through Intelligent Technologies" />
+<meta property="og:description" content="A UK digital-health and AI innovation company building ethical, privacy-first systems for mental wellbeing. The parent company behind NiMind and CARER." />
+<meta property="og:url" content="https://wellnetixltd.com/" />
+<meta property="og:image" content="https://wellnetixltd.com/assets/og-card.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Wellnetix Ltd",
+  "url": "https://wellnetixltd.com/",
+  "description": "UK digital-health and AI innovation company building scalable, ethical, privacy-first systems for mental wellbeing. Parent company behind NiMind and CARER.",
+  "foundingLocation": { "@type": "Country", "name": "United Kingdom" },
+  "brand": [
+    { "@type": "Brand", "name": "NiMind", "url": "https://nimind.com" },
+    { "@type": "Brand", "name": "CARER", "url": "https://carer.wellnetixltd.com" }
+  ],
+  "email": "nimind@wellnetixltd.com"
+}
+</script>
+
+<style>
+  :root{
+    --bg:#0B0B14;
+    --bg-2:#0E0E1A;
+    --surface:#15141F;
+    --surface-2:#1A1826;
+    --border:rgba(255,255,255,.08);
+    --border-str:rgba(255,255,255,.14);
+    --heading:#F4F2FB;
+    --text:#B9B4CC;
+    --muted:#8A85A0;
+    --i:#6D5FF6;   /* indigo */
+    --v:#9B6BF2;   /* violet */
+    --p:#E879C7;   /* pink   */
+    --grad:linear-gradient(100deg,#6D5FF6 0%,#9B6BF2 48%,#E879C7 100%);
+    --grad-soft:linear-gradient(100deg,rgba(109,95,246,.16),rgba(232,121,199,.16));
+    --radius:20px;
+    --maxw:1140px;
+    --ease:cubic-bezier(.4,0,.2,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .grad-text{
+    background:var(--grad);
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;color:transparent;
+  }
+
+  /* ── Ambient background glows ── */
+  .bg-field{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+  .orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5}
+  .orb.a{width:620px;height:620px;top:-220px;left:-160px;
+    background:radial-gradient(circle,rgba(109,95,246,.55),transparent 68%);animation:drift 22s var(--ease) infinite}
+  .orb.b{width:560px;height:560px;top:6%;right:-200px;
+    background:radial-gradient(circle,rgba(232,121,199,.42),transparent 66%);animation:drift 26s var(--ease) infinite reverse}
+  .orb.c{width:520px;height:520px;bottom:-180px;left:34%;
+    background:radial-gradient(circle,rgba(155,107,242,.40),transparent 68%);animation:drift 30s var(--ease) infinite}
+  @keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-30px) scale(1.08)}}
+
+  /* ── Nav ── */
+  header.nav{position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(14px);background:rgba(11,11,20,.72);
+    border-bottom:1px solid var(--border)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.01em;color:var(--heading);font-size:19px}
+  .brand .mark{width:26px;height:26px;border-radius:8px;background:var(--grad);
+    box-shadow:0 4px 16px rgba(155,107,242,.5);position:relative;flex-shrink:0}
+  .brand .mark::after{content:'';position:absolute;inset:6px;border-radius:4px;
+    background:radial-gradient(circle at 32% 30%,rgba(255,255,255,.9),transparent 60%)}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{font-size:14.5px;color:var(--text);transition:color .2s}
+  .nav-links a:hover{color:var(--heading)}
+  .nav-cta{padding:9px 18px;border-radius:999px;background:var(--grad);
+    color:#fff !important;font-weight:600;font-size:14px;
+    box-shadow:0 6px 20px rgba(155,107,242,.4);transition:transform .2s,box-shadow .2s}
+  .nav-cta:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(155,107,242,.55)}
+  .nav-toggle{display:none;background:none;border:0;color:var(--heading);font-size:24px;cursor:pointer}
+  @media(max-width:820px){
+    .nav-links{display:none}
+    .nav-toggle{display:block}
+    .nav-links.open{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;
+      gap:0;background:rgba(14,14,26,.98);border-bottom:1px solid var(--border);padding:8px 24px 20px}
+    .nav-links.open a{padding:12px 0;border-bottom:1px solid var(--border);width:100%}
+    .nav-links.open .nav-cta{margin-top:14px;text-align:center;border-bottom:0}
+  }
+
+  /* ── Section scaffolding ── */
+  section{padding:96px 0;position:relative}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--v);margin-bottom:18px}
+  .eyebrow::before{content:'';width:24px;height:1.5px;background:var(--grad)}
+  h1{font-size:clamp(2.3rem,5.4vw,4rem);line-height:1.08;letter-spacing:-.02em;color:var(--heading);font-weight:800}
+  h2{font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.14;letter-spacing:-.02em;color:var(--heading);font-weight:700}
+  h3{font-size:1.22rem;color:var(--heading);font-weight:650;letter-spacing:-.01em}
+  .lead{font-size:clamp(1.02rem,1.5vw,1.16rem);color:var(--text);max-width:640px}
+
+  /* ── Hero ── */
+  .hero{padding:112px 0 88px;text-align:center}
+  .hero .badge{display:inline-flex;align-items:center;gap:9px;padding:7px 16px;border-radius:999px;
+    background:var(--grad-soft);border:1px solid var(--border-str);
+    font-size:13px;font-weight:600;color:var(--heading);margin-bottom:30px}
+  .hero .badge .spark{font-size:14px;line-height:1}
+  .hero h1{max-width:14ch;margin:0 auto 26px}
+  .hero .lead{margin:0 auto 38px;font-size:clamp(1.05rem,1.7vw,1.25rem)}
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:44px}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:15px 30px;border-radius:999px;
+    font-weight:600;font-size:15.5px;cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s,background .2s}
+  .btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 34px rgba(155,107,242,.42)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(155,107,242,.6)}
+  .btn-ghost{background:rgba(255,255,255,.03);color:var(--heading);border:1px solid var(--border-str)}
+  .btn-ghost:hover{border-color:var(--v);background:rgba(155,107,242,.1);transform:translateY(-2px)}
+  .tags{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .tag{padding:7px 15px;border-radius:999px;border:1px solid var(--border);
+    background:rgba(255,255,255,.02);font-size:13px;color:var(--muted)}
+  .tag b{color:var(--heading);font-weight:600}
+
+  /* ── About ── */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:12px}
+  .about-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:38px 34px;position:relative;overflow:hidden}
+  .about-card::before{content:'';position:absolute;inset:0 auto 0 0;width:3px;background:var(--grad)}
+  .about-card .num{font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--v);margin-bottom:14px}
+  .about-card h3{margin-bottom:12px;font-size:1.35rem}
+  .about-card p{font-size:15.5px;color:var(--text)}
+  @media(max-width:760px){.about-grid{grid-template-columns:1fr}}
+
+  /* ── Focus areas ── */
+  .sec-head{max-width:660px;margin-bottom:52px}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-head p{margin-top:16px}
+  .focus-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .focus-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:30px 26px;transition:transform .25s var(--ease),border-color .25s,background .25s}
+  .focus-card:hover{transform:translateY(-6px);border-color:var(--border-str);background:var(--surface-2)}
+  .focus-card .ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;
+    background:var(--grad-soft);border:1px solid var(--border-str);margin-bottom:18px;font-size:22px}
+  .focus-card h3{font-size:1.06rem;margin-bottom:9px;line-height:1.3}
+  .focus-card p{font-size:14px;color:var(--muted)}
+  @media(max-width:960px){.focus-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.focus-grid{grid-template-columns:1fr}}
+
+  /* ── Products ── */
+  .prod-stack{display:flex;flex-direction:column;gap:26px}
+  .prod{display:grid;grid-template-columns:1.05fr 1fr;gap:0;
+    background:var(--surface);border:1px solid var(--border);border-radius:24px;overflow:hidden}
+  .prod .body{padding:44px 42px}
+  .prod .side{padding:44px 38px;border-left:1px solid var(--border);
+    display:flex;flex-direction:column;justify-content:center;gap:14px;background:rgba(255,255,255,.015)}
+  .prod .kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;
+    letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:999px;
+    background:var(--grad-soft);border:1px solid var(--border-str);color:var(--heading);margin-bottom:18px;align-self:flex-start}
+  .prod h3{font-size:1.7rem;margin-bottom:8px}
+  .prod .tagline{font-size:1.02rem;color:var(--v);font-weight:600;margin-bottom:14px}
+  .prod p.desc{font-size:15.5px;color:var(--text);margin-bottom:24px}
+  .prod .btn{align-self:flex-start}
+  .feat{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--text)}
+  .feat .dot{flex-shrink:0;width:22px;height:22px;border-radius:7px;background:var(--grad-soft);
+    border:1px solid var(--border-str);display:grid;place-items:center;margin-top:1px;font-size:12px;color:var(--heading)}
+  .side .side-title{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  @media(max-width:860px){
+    .prod{grid-template-columns:1fr}
+    .prod .side{border-left:0;border-top:1px solid var(--border)}
+    .prod .body{padding:36px 28px}
+    .prod .side{padding:32px 28px}
+  }
+
+  /* ── Collaboration ── */
+  .collab{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .collab-item{display:flex;gap:16px;align-items:flex-start;background:var(--surface);
+    border:1px solid var(--border);border-radius:16px;padding:24px 26px;transition:border-color .25s,transform .25s}
+  .collab-item:hover{border-color:var(--border-str);transform:translateY(-3px)}
+  .collab-item .ic{flex-shrink:0;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+    background:var(--grad-soft);border:1px solid var(--border-str);font-size:20px}
+  .collab-item h3{font-size:1rem;margin-bottom:4px}
+  .collab-item p{font-size:13.5px;color:var(--muted)}
+  @media(max-width:720px){.collab{grid-template-columns:1fr}}
+
+  /* ── Contact ── */
+  .contact{text-align:center}
+  .contact-card{max-width:820px;margin:0 auto;padding:64px 44px;border-radius:28px;
+    background:linear-gradient(150deg,rgba(109,95,246,.14),rgba(232,121,199,.12));
+    border:1px solid var(--border-str);position:relative;overflow:hidden}
+  .contact-card::before{content:'';position:absolute;width:340px;height:340px;border-radius:50%;
+    top:-140px;left:50%;transform:translateX(-50%);filter:blur(80px);
+    background:radial-gradient(circle,rgba(155,107,242,.5),transparent 70%);pointer-events:none}
+  .contact-card>*{position:relative}
+  .contact h2{margin-bottom:16px}
+  .contact p{margin:0 auto 32px;max-width:520px}
+
+  /* ── Footer ── */
+  footer{border-top:1px solid var(--border);padding:44px 0 52px;background:var(--bg-2)}
+  .foot-in{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px}
+  .foot-brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--heading);font-size:17px}
+  .foot-brand .mark{width:22px;height:22px;border-radius:7px;background:var(--grad)}
+  .foot-meta{font-size:13.5px;color:var(--muted)}
+  .foot-links{display:flex;gap:24px;font-size:14px}
+  .foot-links a{color:var(--text);transition:color .2s}
+  .foot-links a:hover{color:var(--heading)}
+
+  /* ── Reveal on scroll ── */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none !important}
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    .orb{animation:none !important}
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-field" aria-hidden="true">
+  <div class="orb a"></div>
+  <div class="orb b"></div>
+  <div class="orb c"></div>
+</div>
+
+<!-- ── NAV ── -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><span class="mark"></span>Wellnetix</a>
+    <button class="nav-toggle" aria-label="Menu" id="navToggle">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#focus">Focus</a>
+      <a href="#products">Products</a>
+      <a href="#collab">Research</a>
+      <a class="nav-cta" href="#contact">Partner With Us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="badge reveal"><span class="spark">✦</span> AI innovation for human wellbeing</span>
+      <h1 class="reveal"><span class="grad-text">Advancing Human Wellbeing</span><br>Through Intelligent Technologies</h1>
+      <p class="lead reveal">Wellnetix Ltd is a UK digital-health and AI innovation company building scalable, ethical, and privacy-first systems to enhance mental wellness and behavioural insight — the parent company behind NiMind and CARER.</p>
+      <div class="cta-row reveal">
+        <a class="btn btn-primary" href="#products">Explore Our Products →</a>
+        <a class="btn btn-ghost" href="#contact">Partner With Us</a>
+      </div>
+      <div class="tags reveal">
+        <span class="tag"><b>AI-Powered</b></span>
+        <span class="tag"><b>Privacy-First</b></span>
+        <span class="tag"><b>Ethical by Design</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">About Wellnetix</span>
+        <h2>Technology in service of people</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card reveal">
+          <div class="num">01 · WHO WE ARE</div>
+          <h3>The innovation studio behind the products</h3>
+          <p>Wellnetix Ltd is the parent company behind <b style="color:var(--heading)">NiMind</b> and <b style="color:var(--heading)">CARER</b>. We act as a digital-health catalyst, bridging advanced technology and human-centred care — grounded in the belief that technology should serve humanity, not complicate it.</p>
+        </div>
+        <div class="about-card reveal">
+          <div class="num">02 · OUR MISSION</div>
+          <h3>Advancing wellbeing at scale</h3>
+          <p>To advance human wellbeing through intelligent technologies. We build scalable, ethical, privacy-first systems that unlock deep behavioural insight — empowering individuals and professionals to make better decisions for mental health.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOCUS AREAS ── -->
+  <section id="focus" style="background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <span class="eyebrow">What We Build</span>
+        <h2>Our focus areas</h2>
+        <p class="lead" style="margin:16px auto 0">Four capabilities that run through everything Wellnetix ships.</p>
+      </div>
+      <div class="focus-grid">
+        <div class="focus-card reveal">
+          <div class="ic">📡</div>
+          <h3>Passive Smartphone Sensing</h3>
+          <p>Digital biomarkers that understand behavioural patterns without adding burden to the user.</p>
+        </div>
+        <div class="focus-card reveal">
+          <div class="ic">🧠</div>
+          <h3>AI-Driven Insights</h3>
+          <p>Algorithms for mood tracking and behavioural analysis that surface wellness trends early.</p>
+        </div>
+        <div class="focus-card reveal">
+          <div class="ic">🔒</div>
+          <h3>Privacy-First Infrastructure</h3>
+          <p>Secure, ethical systems that protect sensitive mental-health data at every level.</p>
+        </div>
+        <div class="focus-card reveal">
+          <div class="ic">⚙️</div>
+          <h3>Scalable Platforms</h3>
+          <p>Robust solutions built for researchers, clinicians and end-users alike.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PRODUCTS & VENTURES ── -->
+  <section id="products">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Products &amp; Ventures</span>
+        <h2>Two products, one mission</h2>
+        <p class="lead" style="margin-top:16px">From passive behavioural sensing to a private companion for family carers — our products bring the mission to life.</p>
+      </div>
+
+      <div class="prod-stack">
+
+        <!-- NiMind -->
+        <article class="prod reveal">
+          <div class="body">
+            <span class="kicker">✦ Flagship Product</span>
+            <h3>NiMind</h3>
+            <div class="tagline">AI-Powered Mental Health Companion</div>
+            <p class="desc">NiMind combines passive behavioural sensing, mobile mood tracking, and AI-powered chat support into a comprehensive ecosystem for mental wellness — turning everyday signals into gentle, actionable insight.</p>
+            <a class="btn btn-primary" href="https://nimind.com" target="_blank" rel="noopener">Visit NiMind.com →</a>
+          </div>
+          <div class="side">
+            <div class="side-title">What it does</div>
+            <div class="feat"><span class="dot">✓</span> Real-time monitoring via everyday phone sensors</div>
+            <div class="feat"><span class="dot">✓</span> AI support for mood tracking &amp; emotional resilience</div>
+            <div class="feat"><span class="dot">✓</span> Research-ready pipelines for digital phenotyping</div>
+            <div class="feat"><span class="dot">✓</span> GDPR-compliant, consent-driven data</div>
+          </div>
+        </article>
+
+        <!-- CARER -->
+        <article class="prod reveal">
+          <div class="body">
+            <span class="kicker">✦ New · In Early Access</span>
+            <h3>CARER</h3>
+            <div class="tagline">A Private Companion for Unpaid Family Carers</div>
+            <p class="desc">CARER is a warm, private, non-clinical AI companion for the millions of unpaid family carers — somewhere to be heard, to hold the hard feelings, and to be remembered, with free crisis support one tap away. It runs on the carer's own device by default, so what they share stays with them.</p>
+            <a class="btn btn-primary" href="https://carer.wellnetixltd.com" target="_blank" rel="noopener">Visit CARER →</a>
+          </div>
+          <div class="side">
+            <div class="side-title">Built for carers</div>
+            <div class="feat"><span class="dot">✓</span> On-device by default — private, works offline</div>
+            <div class="feat"><span class="dot">✓</span> Remembers your own words — never a score or profile</div>
+            <div class="feat"><span class="dot">✓</span> Free, always-on crisis &amp; safeguarding support</div>
+            <div class="feat"><span class="dot">✓</span> Made specifically for unpaid family carers</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── COLLABORATION & RESEARCH ── -->
+  <section id="collab" style="background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Collaboration &amp; Research</span>
+        <h2>Who we work with</h2>
+        <p class="lead" style="margin-top:16px">We partner across the wellbeing ecosystem to build evidence, extend reach, and keep the science honest.</p>
+      </div>
+      <div class="collab">
+        <div class="collab-item reveal"><div class="ic">🎓</div><div><h3>Universities &amp; Academia</h3><p>Co-developing methods and validating digital biomarkers with research partners.</p></div></div>
+        <div class="collab-item reveal"><div class="ic">🩺</div><div><h3>Clinical Researchers</h3><p>Building research-ready pipelines and real-world evidence for mental-health care.</p></div></div>
+        <div class="collab-item reveal"><div class="ic">🚀</div><div><h3>Mental-Health Startups</h3><p>Licensing platform capabilities and co-creating new wellbeing tools.</p></div></div>
+        <div class="collab-item reveal"><div class="ic">🏛️</div><div><h3>Government &amp; Nonprofits</h3><p>Scaling population-level wellbeing initiatives with ethical, private technology.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="contact-card reveal">
+        <span class="eyebrow" style="justify-content:center">Let's Work Together</span>
+        <h2>Ready to partner with us?</h2>
+        <p class="lead" style="margin:0 auto 32px">Whether you're looking to license our platform, co-develop new tools, or collaborate on research, we're ready to build with you.</p>
+        <a class="btn btn-primary" href="mailto:nimind@wellnetixltd.com">Get in Touch →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="wrap foot-in">
+    <div>
+      <div class="foot-brand"><span class="mark"></span>Wellnetix Ltd</div>
+      <div class="foot-meta" style="margin-top:8px">United Kingdom · © 2026 Wellnetix Ltd. All rights reserved.</div>
+    </div>
+    <div class="foot-links">
+      <a href="https://nimind.com" target="_blank" rel="noopener">NiMind</a>
+      <a href="https://carer.wellnetixltd.com" target="_blank" rel="noopener">CARER</a>
+      <a href="mailto:nimind@wellnetixltd.com">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav
+  var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
+  if(t){t.addEventListener('click',function(){l.classList.toggle('open')});
+    l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open')})});}
+  // Scroll reveal
+  var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!rm && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  }else{document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});}
+</script>
+</body>
+</html>
