@@ -51,6 +51,33 @@ Store slot: App Store Connect → App Store — iPhone 6.9-inch display. Upload 
 
 ---
 
+### `app-store/iphone-6.5/` — Apple iPhone 6.5" — 1284 × 2778 px, RGB, no alpha
+
+| File | Dimensions | Mode | Alpha |
+|------|-----------|------|-------|
+| `01_you-look-after-them.png` | 1284 × 2778 | RGB | None |
+| `02_companion-listens.png` | 1284 × 2778 | RGB | None |
+| `03_words-remembered.png` | 1284 × 2778 | RGB | None |
+| `04_journey.png` | 1284 × 2778 | RGB | None |
+| `05_private-space.png` | 1284 × 2778 | RGB | None |
+| `06_no-scores.png` | 1284 × 2778 | RGB | None |
+| `07_private-by-design.png` | 1284 × 2778 | RGB | None |
+| `08_help-one-tap.png` | 1284 × 2778 | RGB | None |
+
+Store slot: App Store Connect → App Store — iPhone 6.5-inch display. Upload all 8.
+
+This slot accepts **only** 1242×2688, 2688×1242, 1284×2778 or 2778×1284. A
+1320×2868 file (the 6.9" asset above) is rejected here — that was the cause of
+the upload failure this folder fixes. 1284×2778 was chosen over 1242×2688 as
+the higher-resolution of the two permitted portrait sizes.
+
+Same 8 frames, same copy, same design as the 6.9" set. Re-rendered natively at
+the target canvas by `scripts/produce_iphone65.py` (every layout constant scaled
+by a single uniform factor k = 2778/2868), so there is no upscaling, no
+letterboxing and no distortion.
+
+---
+
 ### `app-store/ipad-13/` — Apple iPad 13" — 2064 × 2752 px, RGB, no alpha
 
 | File | Dimensions | Mode | Alpha |

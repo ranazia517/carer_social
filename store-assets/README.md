@@ -13,7 +13,8 @@ store-assets/
 │   └── play-icon-512.png        512×512 RGB — Play-ready
 │
 ├── app-store/
-│   ├── iphone-6.9/              iPhone 6.9" screenshots go here (1320×2868, PNG/JPEG, RGB)
+│   ├── iphone-6.9/              iPhone 6.9" screenshots (1320×2868, PNG/JPEG, RGB)
+│   ├── iphone-6.5/              iPhone 6.5" screenshots (1284×2778, PNG/JPEG, RGB)
 │   └── ipad-13/                 iPad 13" screenshots go here (2064×2752, PNG/JPEG, RGB)
 │
 ├── google-play/
@@ -42,9 +43,14 @@ store-assets/
 |------|-----------|-------|
 | App icon | 1024 × 1024 px | RGB, **NO alpha**. Apple rejects alpha channels. |
 | iPhone 6.9" screenshots | 1320 × 2868 px | PNG or JPEG, RGB, no alpha. Up to 10. |
+| iPhone 6.5" screenshots | 1284 × 2778 px | Slot accepts ONLY 1242×2688 / 2688×1242 / 1284×2778 / 2778×1284. |
 | iPad 13" screenshots | 2064 × 2752 px | PNG or JPEG, RGB, no alpha. Up to 10. |
 
 - Portrait orientation required for all; landscape optional (separate slot).
+- **The 6.9" and 6.5" slots are separate uploads and do not accept each other's
+  files.** Uploading a 1320×2868 file into the 6.5" box fails validation. Use
+  `app-store/iphone-6.9/` for the 6.9" box and `app-store/iphone-6.5/` for the
+  6.5" box.
 - First screenshot is the hero — shown in search results without tapping.
 - Apple accepts both PNG and JPEG; PNG preferred for crisp UI text.
 
